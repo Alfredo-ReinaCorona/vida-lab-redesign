@@ -40,6 +40,11 @@ export const people: Person[] = [
     interests: ["Formal methods", "Cyber-physical systems", "Embedded control systems", "Real-time temporal logics", "Time-series data"],
     linkedinUrl: "https://www.linkedin.com/in/jdeshmukh",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=CwFX74MAAAAJ",
+    selectedWorks: [
+      { title: "Conformal Prediction for STL Runtime Verification", venue: "ICCPS", year: "2023", links: [{ label: "Paper", href: "https://doi.org/10.1145/3576841.3585927" }] },
+      { title: "Statistical Reachability Analysis of Stochastic Cyber-Physical Systems under Distribution Shift", venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1109/TCAD.2024.3438072" }] },
+      { title: "Data-Driven Reachability Analysis of Stochastic Dynamical Systems with Conformal Inference", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2309.09187" }] },
+    ],
     placeholder: false,
   },
   {
@@ -53,7 +58,9 @@ export const people: Person[] = [
     interests: ["Multi-agent reinforcement learning", "Representation learning", "Robotics"],
     website: "https://merveatasever.github.io/Home.html",
     selectedWorks: [
-      { title: "Motion Planning for Automata-Based Objectives Using Efficient Gradient-Based Methods", venue: "IROS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] },
+      { title: "Motion Planning for Automata-based Objectives using Efficient Gradient-based Methods", venue: "IROS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] },
+      { title: "Coordinating Spinal and Limb Dynamics for Enhanced Sprawling Robot Mobility", venue: "arXiv preprint", year: "2025", links: [{ label: "Paper", href: "https://arxiv.org/abs/2504.14103" }] },
+      { title: "Multi-Agent Path Finding via Offline RL and LLM Collaboration", venue: "arXiv preprint", year: "2025", links: [{ label: "Paper", href: "https://arxiv.org/abs/2509.22130" }] },
     ],
     linkedinUrl: "https://www.linkedin.com/in/merveatasever",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=b-_LL5oAAAAJ",
@@ -71,6 +78,11 @@ export const people: Person[] = [
     website: "https://yuan-xia.github.io/cv/",
     linkedinUrl: "https://www.linkedin.com/in/yuan-xia-0227",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=iJoRPmUAAAAJ",
+    selectedWorks: [
+      { title: "LLM-guided Predicate Discovery and Data Augmentation for Learning Likely Program Invariants", venue: "SAC", year: "2025", links: [{ label: "Paper", href: "https://doi.org/10.1145/3672608.3707984" }] },
+      { title: "Discovering Likely Invariants for Distributed Systems Through Runtime Monitoring and Learning", venue: "VMCAI", year: "2025", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-82700-6_1" }] },
+      { title: "Systematic Translation from Natural Language Robot Task Descriptions to STL", venue: "AISoLA", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-75434-0_18" }] },
+    ],
     placeholder: false,
   },
   {
@@ -85,6 +97,11 @@ export const people: Person[] = [
     website: "https://navidhashemicodes.github.io",
     linkedinUrl: "https://www.linkedin.com/in/navid-hashemi-ph-d-919576153",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=M7Ht5zIAAAAJ",
+    selectedWorks: [
+      { title: "Statistical Reachability Analysis of Stochastic Cyber-Physical Systems under Distribution Shift", venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1109/TCAD.2024.3438072" }] },
+      { title: "Data-Driven Reachability Analysis of Stochastic Dynamical Systems with Conformal Inference", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2309.09187" }] },
+      { title: "Scaling Learning-based Policy Optimization for Temporal Logic Tasks by Controller Network Dropout", venue: "ACM Transactions on Cyber-Physical Systems", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1145/3696112" }] },
+    ],
     placeholder: false,
   },
   {
@@ -96,6 +113,11 @@ export const people: Person[] = [
     website: "https://xinqin23.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/xin-qin-4a83b9158",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=-ygrcMkAAAAJ",
+    selectedWorks: [
+      { title: "Conformal Prediction for STL Runtime Verification", venue: "ICCPS", year: "2023", links: [{ label: "Paper", href: "https://doi.org/10.1145/3576841.3585927" }] },
+      { title: "Data-Driven Reachability Analysis of Stochastic Dynamical Systems with Conformal Inference", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2309.09187" }] },
+      { title: "Statistical Verification using Surrogate Models and Conformal Inference and a Comparison with Risk-Aware Verification", venue: "ACM Transactions on Cyber-Physical Systems", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1145/3635160" }] },
+    ],
     placeholder: false,
   },
   {
@@ -129,6 +151,10 @@ export const people: Person[] = [
     website: "https://sjwil.github.io/personal-site/",
     linkedinUrl: "https://www.linkedin.com/in/sam-williams-ab18a1171",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=draxNowAAAAJ",
+    selectedWorks: [
+      { title: "Potential Games on Cubic Splines for Multi-Agent Motion Planning of Autonomous Agents", venue: "AAMAS", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.5555/3635637.3663225" }] },
+      { title: "LB4TL: A Smooth Semantics for Temporal Logic to Train Neural Feedback Controllers", venue: "ADHS", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1016/j.ifacol.2024.07.445" }] },
+    ],
     placeholder: false,
   },
   {
@@ -143,6 +169,11 @@ export const people: Person[] = [
     interests: ["Game theory", "Reinforcement learning", "AI in society"],
     linkedinUrl: "https://www.linkedin.com/in/sheryl-paul-2402",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=Lu7aJZkAAAAJ",
+    selectedWorks: [
+      { title: "Multi-agent Path Finding for Timed Tasks Using Evolutionary Games", venue: "QEST+FORMATS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2411.10558" }] },
+      { title: "Survival of the Fittest: Evolutionary Adaptation of Policies for Environmental Shifts", venue: "ECAI", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.3233/FAIA240874" }] },
+      { title: "Systematic Translation from Natural Language Robot Task Descriptions to STL", venue: "AISoLA", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-75434-0_18" }] },
+    ],
     placeholder: false,
   },
   {
