@@ -27,24 +27,27 @@ function ScholarIcon() {
 }
 
 function getSocialLinks(person: Person): SocialLink[] {
-  return [
-    person.linkedinUrl
-      ? {
-          href: person.linkedinUrl,
-          label: `View ${person.name} on LinkedIn`,
-          name: "LinkedIn" as const,
-          icon: <LinkedInIcon />,
-        }
-      : null,
-    person.googleScholarUrl
-      ? {
-          href: person.googleScholarUrl,
-          label: `View ${person.name} on Google Scholar`,
-          name: "Google Scholar" as const,
-          icon: <ScholarIcon />,
-        }
-      : null,
-  ].filter((link): link is SocialLink => Boolean(link));
+  const links: SocialLink[] = [];
+
+  if (person.linkedinUrl) {
+    links.push({
+      href: person.linkedinUrl,
+      label: `View ${person.name} on LinkedIn`,
+      name: "LinkedIn",
+      icon: <LinkedInIcon />,
+    });
+  }
+
+  if (person.googleScholarUrl) {
+    links.push({
+      href: person.googleScholarUrl,
+      label: `View ${person.name} on Google Scholar`,
+      name: "Google Scholar",
+      icon: <ScholarIcon />,
+    });
+  }
+
+  return links;
 }
 
 export function PersonSocialLinks({ person, className = "" }: { person: Person; className?: string }) {
