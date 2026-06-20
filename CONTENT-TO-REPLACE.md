@@ -22,6 +22,15 @@ The following content is intentionally placeholder, incomplete, or provisional a
   - Systematic Translation from Natural Language Robot Task Descriptions to STL
   - Monitoring Spatially Distributed Cyber-Physical Systems with Alternating Finite Automata
 
+## Selected work requires confirmation
+
+- Jyotirmoy V. Deshmukh
+- Yuan Xia
+- Navid Hashemi
+- Xin Qin
+- Sam Williams
+- Sheryl Paul
+
 ## Research-figure assets needed
 
 - Original high-resolution, lab-approved research figures are needed for any future project-highlight sections.

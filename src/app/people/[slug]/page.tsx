@@ -66,23 +66,28 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
         {person.selectedWorks?.length ? (
           <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="border-l-4 border-[var(--usc-gold)] pl-4 text-2xl font-semibold text-slate-950">Selected work</h2>
-            <ul className="mt-5 divide-y divide-slate-200">
+            <ol className="mt-5 divide-y divide-slate-200">
               {person.selectedWorks.map((work, index) => (
-                <li className="py-4 first:pt-0 last:pb-0" key={`${work.title}-${index}`}>
-                  <h3 className="font-semibold leading-7 text-slate-950">{work.title}</h3>
-                  {[work.venue, work.year].filter(Boolean).length ? <p className="mt-1 text-sm text-slate-600">{[work.venue, work.year].filter(Boolean).join(" · ")}</p> : null}
-                  {work.links?.length ? (
-                    <div className="mt-3 flex flex-wrap gap-3">
-                      {work.links.map((link) => (
-                        <a className="text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline" href={link.href} key={`${link.label}-${link.href}`}>
-                          {link.label} <span aria-hidden="true">↗</span>
-                        </a>
-                      ))}
-                    </div>
-                  ) : null}
+                <li className="grid grid-cols-[2rem_1fr] gap-3 py-4 first:pt-0 last:pb-0" key={`${work.title}-${index}`}>
+                  <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-xs font-semibold tabular-nums text-[var(--usc-cardinal)]" aria-hidden="true">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-semibold leading-7 text-slate-950">{work.title}</h3>
+                    {[work.venue, work.year].filter(Boolean).length ? <p className="mt-1 text-sm font-medium text-slate-600">{[work.venue, work.year].filter(Boolean).join(" · ")}</p> : null}
+                    {work.links?.length ? (
+                      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                        {work.links.map((link) => (
+                          <a className="text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline" href={link.href} key={`${link.label}-${link.href}`}>
+                            {link.label} <span aria-hidden="true">↗</span>
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
                 </li>
               ))}
-            </ul>
+            </ol>
           </section>
         ) : null}
       </div>

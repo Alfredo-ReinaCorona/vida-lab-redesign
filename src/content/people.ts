@@ -1,5 +1,5 @@
 export type PersonLink = {
-  label: "Website" | "Paper" | "Code" | "Project" | "Video" | "DOI";
+  label: "Website" | "Paper" | "Code" | "Project" | "Video";
   href: string;
 };
 
@@ -52,7 +52,9 @@ export const people: Person[] = [
     ],
     interests: ["Multi-agent reinforcement learning", "Representation learning", "Robotics"],
     website: "https://merveatasever.github.io/Home.html",
-    selectedWorks: [{ title: "Paper", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] }],
+    selectedWorks: [
+      { title: "Motion Planning for Automata-Based Objectives Using Efficient Gradient-Based Methods", venue: "IROS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] },
+    ],
     linkedinUrl: "https://www.linkedin.com/in/merveatasever",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=b-_LL5oAAAAJ",
     placeholder: false,
@@ -107,11 +109,9 @@ export const people: Person[] = [
     interests: ["Formal methods", "Cyber-physical systems", "Systems and control theory", "Mathematical optimization"],
     website: "https://zhaoy37.github.io/",
     selectedWorks: [
-      { title: "Selected work", links: [{ label: "Paper", href: "https://arxiv.org/pdf/2402.07407" }, { label: "Code", href: "https://github.com/SAIDS-Lab/Conformal-Predictive-Programming-for-CCO" }] },
-      { title: "Selected work", links: [{ label: "Paper", href: "https://arxiv.org/pdf/2311.09482" }, { label: "Code", href: "https://github.com/SAIDS-Lab/Robust-Conformal-Prediction-for-STL-Runtime-Verification-under-Distribution-Shift" }] },
-      { title: "Selected work", links: [{ label: "Paper", href: "https://arxiv.org/pdf/2302.11137" }] },
-      { title: "Selected work", links: [{ label: "Paper", href: "https://arxiv.org/pdf/2312.04242" }, { label: "Code", href: "https://github.com/SAIDS-Lab/STL-Synthesis-among-Uncontrollable-Agents" }] },
-      { title: "Selected work", links: [{ label: "Paper", href: "https://arxiv.org/pdf/2308.07890" }, { label: "Code", href: "https://github.com/zhaoy37/SAT_Solver" }] },
+      { title: "Conformal Predictive Programming for Chance Constrained Optimization", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2402.07407" }, { label: "Code", href: "https://github.com/SAIDS-Lab/Conformal-Predictive-Programming-for-CCO" }] },
+      { title: "Robust Conformal Prediction for STL Runtime Verification under Distribution Shift", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2311.09482" }, { label: "Code", href: "https://github.com/SAIDS-Lab/Robust-Conformal-Prediction-for-STL-Runtime-Verification-under-Distribution-Shift" }] },
+      { title: "Fairguard: Harness Logic-Based Fairness Rules in Smart Cities", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2302.11137" }] },
     ],
     linkedinUrl: "https://www.linkedin.com/in/nick-yiqi-zhao-0449781b1",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=kim0L6QAAAAJ",
@@ -157,10 +157,8 @@ export const people: Person[] = [
     website: "https://anandb.dev",
     selectedWorks: [
       { title: "Motion Planning for Automata-Based Objectives Using Efficient Gradient-Based Methods", venue: "IROS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] },
-      { title: "Model-Free Reinforcement Learning for Spatiotemporal Tasks Using Symbolic Automata", venue: "CDC", year: "2023", links: [{ label: "DOI", href: "https://doi.org/10.1109/CDC49753.2023.10383559" }] },
-      { title: "PerceMon: Online Monitoring for Perception Systems", venue: "Runtime Verification", year: "2021", links: [{ label: "DOI", href: "https://doi.org/10.1007/978-3-030-88494-9_18" }] },
-      { title: "Structured Reward Shaping Using Signal Temporal Logic Specifications", venue: "IROS", year: "2019", links: [{ label: "DOI", href: "https://doi.org/10.1109/IROS40897.2019.8968254" }] },
-      { title: "Specifying and Evaluating Quality Metrics for Vision-Based Perception Systems", venue: "DATE", year: "2019", links: [{ label: "DOI", href: "https://doi.org/10.23919/DATE.2019.8715114" }] },
+      { title: "Model-Free Reinforcement Learning for Spatiotemporal Tasks Using Symbolic Automata", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://doi.org/10.1109/CDC49753.2023.10383559" }] },
+      { title: "PerceMon: Online Monitoring for Perception Systems", venue: "Runtime Verification", year: "2021", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-030-88494-9_18" }] },
     ],
     linkedinUrl: "https://www.linkedin.com/in/anandb1597",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=egagNkwAAAAJ",
