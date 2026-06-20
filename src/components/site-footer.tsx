@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 md:grid-cols-[1.5fr_1fr]">
         <div>
           <p className="text-lg font-semibold text-white">CPS-VIDA Lab</p>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-300">Verification, Intelligence, Design, and Analysis. This redesign uses placeholders until lab-approved content is supplied.</p>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-300">Verification, Intelligence, Design, and Analysis. Formal methods, control, artificial intelligence, and cyber-physical systems research at USC.</p>
         </div>
         <nav aria-label="Footer navigation">
           <ul className="grid grid-cols-2 gap-3 text-sm">

@@ -1,33 +1,38 @@
 export type ResearchArea = {
   title: string;
   summary: string;
-  status: "provisional" | "placeholder";
+  status: "current" | "needs approved project details";
 };
 
 export const researchAreas: ResearchArea[] = [
   {
-    title: "Verification for autonomous cyber-physical systems",
-    summary: "Provisional area based on the project brief; replace with approved lab language before final publication.",
-    status: "provisional",
+    title: "Formal Methods and Verification",
+    summary: "Mathematically grounded specification, verification, falsification, and analysis techniques for cyber-physical and autonomous systems whose behavior must be checked against rigorous requirements.",
+    status: "current",
   },
   {
-    title: "Specification languages for cyber-physical systems",
-    summary: "Space for describing how the lab formalizes requirements for complex systems once approved wording is available.",
-    status: "provisional",
+    title: "Learning-Enabled Cyber-Physical Systems",
+    summary: "Methods for reasoning about systems that combine physical dynamics, software controllers, and learned components, with emphasis on safety, correctness, and interpretable evidence.",
+    status: "current",
   },
   {
-    title: "Security monitoring for cyber-physical systems",
-    summary: "Placeholder for validated project narratives about monitoring, resilience, and security-relevant analysis.",
-    status: "placeholder",
+    title: "Temporal Logic and Runtime Monitoring",
+    summary: "Specification languages and monitoring techniques for time-series behaviors, including signal temporal logic, temporal patterns, predictive monitoring, and online checks for system requirements.",
+    status: "current",
   },
   {
-    title: "Safe controller synthesis for autonomy",
-    summary: "Provisional theme for verifiable and safe controller synthesis; add confirmed methods, systems, and results later.",
-    status: "provisional",
+    title: "Reinforcement Learning and Controller Synthesis",
+    summary: "Specification-guided approaches for controller synthesis and reinforcement learning, including safe reinforcement learning, reward shaping, and formal reasoning about learned policies.",
+    status: "current",
   },
   {
-    title: "Temporal-logic reasoning for time-series data",
-    summary: "Placeholder area for probabilistic reasoning about time-series data using temporal logic after review by the lab.",
-    status: "placeholder",
+    title: "Multi-Agent Systems, Game Theory, and Autonomous Systems",
+    summary: "Analysis and design questions arising in autonomous and multi-agent settings, including game-theoretic reasoning and verification-oriented approaches to coordinated system behavior.",
+    status: "needs approved project details",
+  },
+  {
+    title: "LLMs and Perception-System Monitoring",
+    summary: "Monitoring and evaluation directions for perception and AI-enabled systems, including requirements-focused checks for perception components and emerging large-language-model-enabled workflows.",
+    status: "needs approved project details",
   },
 ];

@@ -3,7 +3,7 @@ import { siteRoutes } from "@/lib/paths";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b-2 border-[var(--usc-gold)] bg-white/95 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
         <Link href="/" className="font-semibold tracking-tight text-slate-950">
           <span className="block text-lg">CPS-VIDA Lab</span>
@@ -12,7 +12,7 @@ export function SiteHeader() {
         <ul className="hidden items-center gap-6 md:flex">
           {siteRoutes.map((route) => (
             <li key={route.href}>
-              <Link className="text-sm font-medium text-slate-700 hover:text-red-900" href={route.href}>{route.label}</Link>
+              <Link className="text-sm font-medium text-slate-700 hover:text-[var(--usc-cardinal)]" href={route.href}>{route.label}</Link>
             </li>
           ))}
         </ul>
