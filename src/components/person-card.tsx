@@ -1,6 +1,7 @@
+import Link from "next/link";
 import type { Person } from "@/content/people";
 
-function initials(name: string) {
+export function getInitials(name: string) {
   return name
     .replace(/[“”]/g, "")
     .split(/\s+/)
@@ -13,25 +14,29 @@ function initials(name: string) {
 
 export function PersonCard({ person }: { person: Person }) {
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)]" aria-hidden="true">
-        {initials(person.name)}
-      </div>
-      <h3 className="mt-4 text-lg font-semibold text-slate-950">{person.name}</h3>
-      {person.role ? <p className="mt-1 text-sm font-medium text-[var(--usc-cardinal)]">{person.role}</p> : null}
-      {person.bio ? <p className="mt-3 text-sm leading-6 text-slate-700">{person.bio}</p> : null}
-      {person.interests.length ? (
-        <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${person.name} research interests`}>
-          {person.interests.map((interest) => (
-            <li className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700" key={interest}>{interest}</li>
-          ))}
-        </ul>
-      ) : null}
-      {person.links?.length ? (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {person.links.map((link) => <a className="text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline" href={link.href} key={link.href}>{link.label}</a>)}
+    <Link
+      href={`/people/${person.slug}/`}
+      className="group block h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--usc-cardinal)] hover:shadow-md focus-visible:border-[var(--usc-cardinal)]"
+      aria-label={`View ${person.name}'s profile`}
+    >
+      <article className="flex h-full flex-col">
+        <div className="flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)]" aria-hidden="true">
+          {getInitials(person.name)}
         </div>
-      ) : null}
-    </article>
+        <h3 className="mt-4 text-lg font-semibold text-slate-950">{person.name}</h3>
+        {person.role ? <p className="mt-1 text-sm font-medium text-[var(--usc-cardinal)]">{person.role}</p> : null}
+        <p className="mt-3 text-sm leading-6 text-slate-700">{person.cardSummary}</p>
+        {person.interests.length ? (
+          <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${person.name} research interests`}>
+            {person.interests.slice(0, 5).map((interest) => (
+              <li className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700" key={interest}>{interest}</li>
+            ))}
+          </ul>
+        ) : null}
+        <span className="mt-auto pt-5 text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 group-hover:underline">
+          View profile <span aria-hidden="true">→</span>
+        </span>
+      </article>
+    </Link>
   );
 }
