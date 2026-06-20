@@ -1,38 +1,73 @@
+export type PersonLink = { label: "Profile" | "Website"; href: string };
+
 export type Person = {
   name: string;
-  role: string;
-  group: "Faculty director" | "PhD students" | "Visiting scholars" | "Alumni";
-  bio: string;
+  role?: string;
+  group: "Faculty director" | "Lab members";
+  bio?: string;
+  interests: string[];
+  links?: PersonLink[];
   placeholder: boolean;
 };
 
 export const people: Person[] = [
   {
-    name: "Approved faculty director name needed",
-    role: "Faculty director — placeholder pending confirmation",
+    name: "Jyotirmoy V. Deshmukh",
+    role: "Associate Professor of Computer Science and Electrical and Computer Engineering",
     group: "Faculty director",
-    bio: "Replace with verified title, affiliation, biography, and profile links.",
-    placeholder: true,
+    bio: "Research Director, CPS-VIDA Lab; Co-Director, Center for Autonomy and AI.",
+    interests: ["Formal methods", "Control theory", "Cyber-physical systems", "Artificial intelligence"],
+    links: [{ label: "Profile", href: "https://viterbi-web.usc.edu/~jdeshm/" }],
+    placeholder: false,
   },
   {
-    name: "Approved PhD student roster needed",
-    role: "PhD students — placeholder pending confirmation",
-    group: "PhD students",
-    bio: "Add each student only after names, programs, and profile details are approved.",
-    placeholder: true,
+    name: "Merve Atasever",
+    group: "Lab members",
+    interests: [],
+    placeholder: false,
   },
   {
-    name: "Approved visiting scholar roster needed",
-    role: "Visiting scholars — placeholder pending confirmation",
-    group: "Visiting scholars",
-    bio: "Use this section only when current visiting appointments are confirmed.",
-    placeholder: true,
+    name: "Yuan Xia",
+    group: "Lab members",
+    interests: ["Machine learning", "Formal methods"],
+    placeholder: false,
   },
   {
-    name: "Approved alumni roster needed",
-    role: "Alumni — placeholder pending confirmation",
-    group: "Alumni",
-    bio: "Add alumni names, graduation years, and current roles only after review.",
-    placeholder: true,
+    name: "Navid Hashemi",
+    group: "Lab members",
+    interests: ["Cyber-physical systems", "Control theory", "Fault detection", "Reinforcement learning"],
+    placeholder: false,
+  },
+  {
+    name: "Xin Qin",
+    group: "Lab members",
+    interests: ["Formal methods", "Predictive monitoring", "Automated testing", "Machine learning"],
+    links: [{ label: "Website", href: "https://xinqin23.github.io/" }],
+    placeholder: false,
+  },
+  {
+    name: "Yiqi “Nick” Zhao",
+    group: "Lab members",
+    interests: [],
+    placeholder: false,
+  },
+  {
+    name: "Sam Williams",
+    group: "Lab members",
+    interests: [],
+    placeholder: false,
+  },
+  {
+    name: "Sheryl Paul",
+    group: "Lab members",
+    interests: ["Game theory", "Formal methods and verification"],
+    placeholder: false,
+  },
+  {
+    name: "Anand Balakrishnan",
+    group: "Lab members",
+    interests: ["Learning algorithms for controller synthesis", "Safety in reinforcement learning", "Verification of perception systems"],
+    links: [{ label: "Website", href: "https://anandb.me/" }],
+    placeholder: false,
   },
 ];
