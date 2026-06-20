@@ -19,6 +19,8 @@ export type Person = {
   biography?: string[];
   interests: string[];
   website?: string;
+  linkedinUrl?: string;
+  googleScholarUrl?: string;
   selectedWorks?: SelectedWork[];
   placeholder: boolean;
 };
@@ -36,6 +38,8 @@ export const people: Person[] = [
       "His research interests include applying formal methods to cyber-physical systems, verification and testing of embedded control systems, real-time temporal logics, and analysis of time-series data. He is particularly interested in cyber-physical systems that use machine-learning-based components.",
     ],
     interests: ["Formal methods", "Cyber-physical systems", "Embedded control systems", "Real-time temporal logics", "Time-series data"],
+    linkedinUrl: "https://www.linkedin.com/in/jdeshmukh",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=CwFX74MAAAAJ",
     placeholder: false,
   },
   {
@@ -49,6 +53,8 @@ export const people: Person[] = [
     interests: ["Multi-agent reinforcement learning", "Representation learning", "Robotics"],
     website: "https://merveatasever.github.io/Home.html",
     selectedWorks: [{ title: "Paper", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] }],
+    linkedinUrl: "https://www.linkedin.com/in/merveatasever",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=b-_LL5oAAAAJ",
     placeholder: false,
   },
   {
@@ -61,6 +67,8 @@ export const people: Person[] = [
     ],
     interests: ["Large language models", "Multimodal AI", "Software engineering"],
     website: "https://yuan-xia.github.io/cv/",
+    linkedinUrl: "https://www.linkedin.com/in/yuan-xia-0227",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=iJoRPmUAAAAJ",
     placeholder: false,
   },
   {
@@ -73,6 +81,8 @@ export const people: Person[] = [
     ],
     interests: ["Signal temporal logic", "Neurosymbolic AI", "Verification", "Feedback model-based reinforcement learning", "Neural network robustness analysis", "Sensor-fault analysis in cyber-physical systems"],
     website: "https://navidhashemicodes.github.io",
+    linkedinUrl: "https://www.linkedin.com/in/navid-hashemi-ph-d-919576153",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=M7Ht5zIAAAAJ",
     placeholder: false,
   },
   {
@@ -82,6 +92,8 @@ export const people: Person[] = [
     cardSummary: "Focuses on predictive monitoring, robust testing, verification, formal methods, and machine learning.",
     interests: ["Predictive monitoring", "Robust testing", "Verification", "Formal methods", "Machine learning"],
     website: "https://xinqin23.github.io/",
+    linkedinUrl: "https://www.linkedin.com/in/xin-qin-4a83b9158",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=-ygrcMkAAAAJ",
     placeholder: false,
   },
   {
@@ -101,6 +113,8 @@ export const people: Person[] = [
       { title: "Selected work", links: [{ label: "Paper", href: "https://arxiv.org/pdf/2312.04242" }, { label: "Code", href: "https://github.com/SAIDS-Lab/STL-Synthesis-among-Uncontrollable-Agents" }] },
       { title: "Selected work", links: [{ label: "Paper", href: "https://arxiv.org/pdf/2308.07890" }, { label: "Code", href: "https://github.com/zhaoy37/SAT_Solver" }] },
     ],
+    linkedinUrl: "https://www.linkedin.com/in/nick-yiqi-zhao-0449781b1",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=kim0L6QAAAAJ",
     placeholder: false,
   },
   {
@@ -113,6 +127,8 @@ export const people: Person[] = [
     ],
     interests: ["Formal methods", "Game theory", "Multi-agent systems", "Optimization"],
     website: "https://sjwil.github.io/personal-site/",
+    linkedinUrl: "https://www.linkedin.com/in/sam-williams-ab18a1171",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=draxNowAAAAJ",
     placeholder: false,
   },
   {
@@ -125,6 +141,8 @@ export const people: Person[] = [
       "Her doctoral research focuses on evolutionary games in reinforcement-learning settings for pathfinding and distribution shift. She has also worked on societal applications of AI and game theory, including pandemic models for compliance with government restrictions and methods for incentivizing sustainable behavior. She has additionally collaborated on projects involving formal methods and signal temporal logic.",
     ],
     interests: ["Game theory", "Reinforcement learning", "AI in society"],
+    linkedinUrl: "https://www.linkedin.com/in/sheryl-paul-2402",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=Lu7aJZkAAAAJ",
     placeholder: false,
   },
   {
@@ -144,6 +162,8 @@ export const people: Person[] = [
       { title: "Structured Reward Shaping Using Signal Temporal Logic Specifications", venue: "IROS", year: "2019", links: [{ label: "DOI", href: "https://doi.org/10.1109/IROS40897.2019.8968254" }] },
       { title: "Specifying and Evaluating Quality Metrics for Vision-Based Perception Systems", venue: "DATE", year: "2019", links: [{ label: "DOI", href: "https://doi.org/10.23919/DATE.2019.8715114" }] },
     ],
+    linkedinUrl: "https://www.linkedin.com/in/anandb1597",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=egagNkwAAAAJ",
     placeholder: false,
   },
 ];

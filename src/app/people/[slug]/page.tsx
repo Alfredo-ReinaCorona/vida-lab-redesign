@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getInitials } from "@/components/person-card";
+import { PersonSocialLinks } from "@/components/social-links";
 import { getPersonBySlug, people } from "@/content/people";
 
 export function generateStaticParams() {
@@ -32,6 +33,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
             <div className="flex h-32 w-32 items-center justify-center rounded-3xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-4xl font-semibold text-[var(--usc-cardinal)]" aria-hidden="true">
               {getInitials(person.name)}
             </div>
+            <PersonSocialLinks person={person} className="mt-4" />
           </aside>
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-[var(--usc-cardinal)]">Profile</p>
