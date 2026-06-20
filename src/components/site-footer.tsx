@@ -15,6 +15,14 @@ export function SiteFooter() {
           </ul>
         </nav>
       </div>
+      <div className="mx-auto max-w-6xl border-t border-[var(--usc-gold)]/40 px-5 py-4 text-xs text-slate-400">
+        © 2026 CPS-VIDA Lab · Website designed by{" "}
+        <a className="hover:text-white" href="https://www.linkedin.com/in/alfredo-reina-corona-bb60a51a2" target="_blank" rel="noreferrer">Alfredo Reina Corona</a>
+        {" "}· Built with{" "}
+        <a className="hover:text-white" href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a>
+        {" "}· Hosted on{" "}
+        <a className="hover:text-white" href="https://pages.github.com/" target="_blank" rel="noreferrer">GitHub Pages</a>
+      </div>
     </footer>
   );
 }
