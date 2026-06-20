@@ -15,20 +15,17 @@ export function getInitials(name: string) {
 
 export function PersonCard({ person }: { person: Person }) {
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--usc-cardinal)] hover:shadow-md focus-within:border-[var(--usc-cardinal)]">
+    <article className="group relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--usc-cardinal)] hover:shadow-md focus-within:border-[var(--usc-cardinal)]">
       <Link
         href={`/people/${person.slug}/`}
-        className="inline-flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)] transition hover:border-[var(--usc-cardinal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]"
+        className="absolute inset-0 z-10 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]"
         aria-label={`View ${person.name}'s profile`}
-      >
+      />
+      <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)] transition group-hover:border-[var(--usc-cardinal)]">
         {getInitials(person.name)}
-      </Link>
-      <PersonSocialLinks person={person} className="mt-3" />
-      <h3 className="mt-4 text-lg font-semibold text-slate-950">
-        <Link className="underline-offset-4 hover:text-[var(--usc-cardinal)] hover:underline focus-visible:text-[var(--usc-cardinal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]" href={`/people/${person.slug}/`}>
-          {person.name}
-        </Link>
-      </h3>
+      </div>
+      <PersonSocialLinks person={person} className="relative z-20 mt-3" />
+      <h3 className="mt-4 text-lg font-semibold text-slate-950">{person.name}</h3>
       {person.role ? <p className="mt-1 text-sm font-medium text-[var(--usc-cardinal)]">{person.role}</p> : null}
       <p className="mt-3 text-sm leading-6 text-slate-700">{person.cardSummary}</p>
       {person.interests.length ? (
@@ -38,9 +35,6 @@ export function PersonCard({ person }: { person: Person }) {
           ))}
         </ul>
       ) : null}
-      <Link className="mt-auto pt-5 text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]" href={`/people/${person.slug}/`}>
-        View profile <span aria-hidden="true">→</span>
-      </Link>
     </article>
   );
 }
