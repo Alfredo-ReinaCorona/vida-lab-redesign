@@ -23,7 +23,8 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm install
+          cache-dependency-path: package-lock.json
+      - run: npm ci
       - run: NEXT_PUBLIC_BASE_PATH=/vida-lab-redesign npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
