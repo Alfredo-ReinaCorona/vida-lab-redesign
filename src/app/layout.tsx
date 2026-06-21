@@ -9,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><SiteHeader />{children}<SiteFooter /></body></html>;
+  return (
+    <html lang="en">
+      <body className="flex min-h-dvh flex-col">
+        <SiteHeader />
+        <div className="flex-1">{children}</div>
+        <SiteFooter />
+      </body>
+    </html>
+  );
 }
