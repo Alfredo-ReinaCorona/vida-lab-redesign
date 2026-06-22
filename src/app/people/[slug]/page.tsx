@@ -6,6 +6,17 @@ import { PersonSocialLinks } from "@/components/social-links";
 import { getPersonBySlug, people } from "@/content/people";
 import { withBasePath } from "@/lib/paths";
 
+const selectedWorkProfileSlugs = new Set([
+  "vidisha-kudalkar",
+  "iurii-biktairov",
+  "edward-kim",
+  "ryan-rubel",
+  "aniruddh-puranic",
+  "sara-mohammadinejad",
+  "mihir-nitin-kulkarni",
+  "qingpei-li",
+]);
+
 export function generateStaticParams() {
   return people.map((person) => ({ slug: person.slug }));
 }
@@ -28,7 +39,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
   const hasNarrative = Boolean(person.biography?.length || person.cardSummary);
   const profileWebsiteUrl = person.websiteUrl ?? person.website;
   const interests = person.researchInterests ?? person.interests;
-  const selectedWorks = person.selectedWork ?? person.selectedWorks;
+  const selectedWorks = selectedWorkProfileSlugs.has(person.slug) ? (person.selectedWork ?? person.selectedWorks) : undefined;
 
   return (
     <main className="mx-auto max-w-5xl px-5 py-12">
@@ -112,7 +123,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
                     {work.links?.length ? (
                       <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                         {work.links.map((link) => (
-                          <a className="text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline" href={link.href} key={`${link.label}-${link.href}`}>
+                          <a className="text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline" href={link.href} key={`${link.label}-${link.href}`} rel="noreferrer" target="_blank">
                             {link.label} <span aria-hidden="true">↗</span>
                           </a>
                         ))}
