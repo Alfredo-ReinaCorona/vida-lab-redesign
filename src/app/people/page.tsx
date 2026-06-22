@@ -10,6 +10,7 @@ const sections: PeopleSection[] = [
   { title: "Faculty director", groups: ["Faculty director"] },
   { title: "Ph.D. Students", groups: ["phd"] },
   { title: "M.S. Students", groups: ["ms"] },
+  { title: "Undergraduate Students", groups: ["undergrad"] },
 ];
 
 const groupNameOrder: Partial<Record<Person["group"], string[]>> = {
@@ -35,8 +36,6 @@ const groupNameOrder: Partial<Record<Person["group"], string[]>> = {
 
 const alumniSections: PeopleSection[] = [
   { title: "Former Ph.D. Students", groups: ["former-phd"] },
-  { title: "Former M.S. Students", groups: ["former-ms"] },
-  { title: "Former Undergraduate Students", groups: ["former-undergrad"] },
 ];
 
 function getPeopleForGroups(groups: Person["group"][]) {

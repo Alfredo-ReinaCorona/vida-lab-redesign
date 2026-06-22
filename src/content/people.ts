@@ -15,7 +15,7 @@ export type Person = {
   slug: string;
   role?: string;
   displayRole?: string;
-  group: "Faculty director" | "phd" | "ms" | "former-phd" | "former-ms" | "former-undergrad";
+  group: "Faculty director" | "phd" | "ms" | "undergrad" | "former-phd" | "former-ms" | "former-undergrad";
   cardSummary?: string;
   imageSrc?: string;
   imagePosition?: string;
@@ -193,6 +193,12 @@ export const people: Person[] = [
     imageSrc: "/images/people/Vidisha.jpg",
     group: "phd",
     interests: [],
+    linkedinUrl: "https://www.linkedin.com/in/vidisha-kudalkar",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=1HGyJhgAAAAJ",
+    selectedWorks: [
+      { title: "Sampling-Based and Gradient-Based Efficient Scenario Generation", venue: "Runtime Verification", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-74234-7_5" }] },
+      { title: "Systematic Translation from Natural Language Robot Task Descriptions to STL", venue: "AISoLA", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-75434-0_18" }] },
+    ],
     placeholder: true,
   },
   {
@@ -201,6 +207,12 @@ export const people: Person[] = [
     imageSrc: "/images/people/Iurii.jpg",
     group: "phd",
     interests: [],
+    linkedinUrl: "https://www.linkedin.com/in/yuriy-biktairov-55117287",
+    selectedWorks: [
+      { title: "SOL: Sampling-based Optimal Linear Bounding of Arbitrary Scalar Functions", venue: "NeurIPS", year: "2023", links: [{ label: "Paper", href: "https://proceedings.neurips.cc/paper_files/paper/2023/file/690b93e9ab0cc3b1d88b32f6f473ce69-Paper-Conference.pdf" }] },
+      { title: "Match and Locate: Low-Frequency Monocular Odometry Based on Deep Feature Matching", venue: "arXiv", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2311.10034" }] },
+      { title: "Simple Approximation Algorithms for Polyamorous Scheduling", venue: "arXiv", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2411.06292" }] },
+    ],
     placeholder: true,
   },
   {
@@ -209,6 +221,14 @@ export const people: Person[] = [
     imageSrc: "/images/people/Edward.jpg",
     group: "phd",
     interests: [],
+    websiteUrl: "https://www.eddie-kim.org/",
+    linkedinUrl: "https://www.linkedin.com/in/edward-kim-620356184",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=Wn6iETgAAAAJ",
+    selectedWorks: [
+      { title: "Querying Labelled Data with Scenario Programs for Sim-to-Real Validation", venue: "ICCPS", year: "2022", links: [{ label: "Paper", href: "https://doi.org/10.1109/ICCPS54341.2022.00010" }] },
+      { title: "Automatic Dynamic Parallelotope Bundles for Reachability Analysis of Nonlinear Systems", venue: "FORMATS", year: "2021", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-030-85037-1_4" }] },
+      { title: "Coverage-Guided Fuzz Testing for Cyber-Physical Systems", venue: "ICCPS", year: "2022", links: [{ label: "Paper", href: "https://doi.org/10.1109/ICCPS54341.2022.00009" }] },
+    ],
     placeholder: true,
   },
   {
@@ -217,6 +237,12 @@ export const people: Person[] = [
     imageSrc: "/images/people/Ryan.jpg",
     group: "phd",
     interests: [],
+    linkedinUrl: "https://www.linkedin.com/in/ryan-rubel-b3a3a219b",
+    selectedWorks: [
+      { title: "SurfaceAug: Closing the Gap in Multimodal Ground Truth Sampling", venue: "arXiv", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2312.03808" }] },
+      { title: "Automated Multimodal Data Annotation via Calibration With Indoor Positioning System", venue: "arXiv", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2312.03608" }] },
+      { title: "Autonomous Soil Collection in Environments With Heterogeneous Terrain", venue: "arXiv", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2407.11251" }] },
+    ],
     placeholder: true,
   },
   {
@@ -243,6 +269,14 @@ export const people: Person[] = [
     slug: "aniruddh-puranic",
     group: "former-phd",
     interests: [],
+    websiteUrl: "https://aniruddh-puranic.info/",
+    linkedinUrl: "https://www.linkedin.com/in/andyruddh",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=6Ava7scAAAAJ",
+    selectedWorks: [
+      { title: "Learning from Demonstrations using Signal Temporal Logic", venue: "CoRL", year: "2021", links: [{ label: "Paper", href: "https://arxiv.org/abs/2102.07730" }] },
+      { title: "Learning Performance Graphs from Demonstrations via Task-Based Evaluations", venue: "arXiv", year: "2022", links: [{ label: "Paper", href: "https://arxiv.org/abs/2204.05909" }] },
+      { title: "Learning from Imperfect Demonstrations via Temporal Behavior Tree-Guided Trajectory Repair", venue: "arXiv", year: "2026", links: [{ label: "Paper", href: "https://arxiv.org/abs/2604.04225" }] },
+    ],
     placeholder: true,
   },
   {
@@ -250,6 +284,10 @@ export const people: Person[] = [
     slug: "sara-mohammadinejad",
     group: "former-phd",
     interests: [],
+    linkedinUrl: "https://www.linkedin.com/in/sara-mohammadinejad-26271417b",
+    selectedWorks: [
+      { title: "Systematic Translation from Natural Language Robot Task Descriptions to STL", venue: "AISoLA", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-75434-0_18" }] },
+    ],
     placeholder: true,
   },
   {
@@ -292,21 +330,30 @@ export const people: Person[] = [
   {
     name: "Mihir Nitin Kulkarni",
     slug: "mihir-nitin-kulkarni",
-    group: "former-ms",
+    group: "ms",
     interests: [],
+    linkedinUrl: "https://www.linkedin.com/in/mihir--kulkarni",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=lSX6abkAAAAJ",
+    selectedWorks: [
+      { title: "Multi-Agent Path Finding via Offline RL and LLM Collaboration", venue: "arXiv", year: "2025", links: [{ label: "Paper", href: "https://arxiv.org/abs/2509.22130" }] },
+    ],
     placeholder: true,
   },
   {
     name: "Qingpei Li",
     slug: "qingpei-li",
-    group: "former-ms",
+    group: "ms",
     interests: [],
+    linkedinUrl: "https://www.linkedin.com/in/qingpei-li-224724358",
+    selectedWorks: [
+      { title: "Multi-Agent Path Finding via Offline RL and LLM Collaboration", venue: "arXiv", year: "2025", links: [{ label: "Paper", href: "https://arxiv.org/abs/2509.22130" }] },
+    ],
     placeholder: true,
   },
   {
     name: "Richard Yang",
     slug: "richard-yang",
-    group: "former-undergrad",
+    group: "undergrad",
     interests: ["Robotics"],
     websiteUrl: "https://riyang25.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/yangricharduf/",
@@ -315,7 +362,7 @@ export const people: Person[] = [
   {
     name: "Celina Wang",
     slug: "celina-wang",
-    group: "former-undergrad",
+    group: "undergrad",
     interests: [],
     placeholder: true,
   },
