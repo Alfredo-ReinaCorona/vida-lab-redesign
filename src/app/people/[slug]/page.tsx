@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getInitials, getPersonRole } from "@/components/person-card";
 import { PersonSocialLinks } from "@/components/social-links";
 import { getPersonBySlug, people } from "@/content/people";
+import { withBasePath } from "@/lib/paths";
 
 export function generateStaticParams() {
   return people.map((person) => ({ slug: person.slug }));
@@ -39,11 +40,12 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
           <aside>
             {person.imageSrc ? (
               <Image
-                src={person.imageSrc}
+                src={withBasePath(person.imageSrc)}
                 alt={`${person.name} headshot`}
                 width={128}
                 height={128}
                 className="h-32 w-32 rounded-3xl border border-[var(--usc-gold)] object-cover"
+                style={person.imagePosition ? { objectPosition: person.imagePosition } : undefined}
               />
             ) : (
               <div className="flex h-32 w-32 items-center justify-center rounded-3xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-4xl font-semibold text-[var(--usc-cardinal)]" aria-hidden="true">
