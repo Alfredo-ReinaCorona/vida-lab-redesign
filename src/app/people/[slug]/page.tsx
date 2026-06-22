@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getInitials } from "@/components/person-card";
+import { getInitials, getPersonRole } from "@/components/person-card";
 import { PersonSocialLinks } from "@/components/social-links";
 import { getPersonBySlug, people } from "@/content/people";
 
@@ -22,6 +22,9 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
 
   if (!person) notFound();
 
+  const role = getPersonRole(person);
+  const hasNarrative = Boolean(person.biography?.length || person.cardSummary);
+
   return (
     <main className="mx-auto max-w-5xl px-5 py-12">
       <Link className="text-sm font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline" href="/people/">
@@ -38,10 +41,12 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-[var(--usc-cardinal)]">Profile</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-950">{person.name}</h1>
-            {person.role ? <p className="mt-3 text-base font-medium leading-7 text-[var(--usc-cardinal)]">{person.role}</p> : null}
-            <div className="mt-6 space-y-4 text-base leading-8 text-slate-700">
-              {(person.biography?.length ? person.biography : [person.cardSummary]).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-            </div>
+            {role ? <p className="mt-3 text-base font-medium leading-7 text-[var(--usc-cardinal)]">{role}</p> : null}
+            {hasNarrative ? (
+              <div className="mt-6 space-y-4 text-base leading-8 text-slate-700">
+                {(person.biography?.length ? person.biography : [person.cardSummary]).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
