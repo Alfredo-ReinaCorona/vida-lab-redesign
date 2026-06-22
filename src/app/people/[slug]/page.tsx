@@ -24,6 +24,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
 
   const role = getPersonRole(person);
   const hasNarrative = Boolean(person.biography?.length || person.cardSummary);
+  const profileWebsiteUrl = person.websiteUrl ?? person.website;
 
   return (
     <main className="mx-auto max-w-5xl px-5 py-12">
@@ -59,9 +60,16 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
               <li className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-700" key={interest}>{interest}</li>
             ))}
           </ul>
-          {person.website ? (
+          {profileWebsiteUrl ? (
             <div className="mt-6 border-t border-slate-200 pt-5">
-              <a className="font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline" href={person.website}>
+              <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Website</h2>
+              <a
+                aria-label={`Visit ${person.name}’s website.`}
+                className="mt-2 inline-block font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline"
+                href={profileWebsiteUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
                 Personal website <span aria-hidden="true">↗</span>
               </a>
             </div>
