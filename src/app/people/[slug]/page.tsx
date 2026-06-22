@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getInitials, getPersonRole } from "@/components/person-card";
@@ -25,6 +26,8 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
   const role = getPersonRole(person);
   const hasNarrative = Boolean(person.biography?.length || person.cardSummary);
   const profileWebsiteUrl = person.websiteUrl ?? person.website;
+  const interests = person.researchInterests ?? person.interests;
+  const selectedWorks = person.selectedWork ?? person.selectedWorks;
 
   return (
     <main className="mx-auto max-w-5xl px-5 py-12">
@@ -34,9 +37,19 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
       <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
         <div className="grid gap-8 md:grid-cols-[12rem_1fr]">
           <aside>
-            <div className="flex h-32 w-32 items-center justify-center rounded-3xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-4xl font-semibold text-[var(--usc-cardinal)]" aria-hidden="true">
-              {getInitials(person.name)}
-            </div>
+            {person.imageSrc ? (
+              <Image
+                src={person.imageSrc}
+                alt={`${person.name} headshot`}
+                width={128}
+                height={128}
+                className="h-32 w-32 rounded-3xl border border-[var(--usc-gold)] object-cover"
+              />
+            ) : (
+              <div className="flex h-32 w-32 items-center justify-center rounded-3xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-4xl font-semibold text-[var(--usc-cardinal)]" aria-hidden="true">
+                {getInitials(person.name)}
+              </div>
+            )}
             <PersonSocialLinks person={person} className="mt-4" />
           </aside>
           <div>
@@ -53,34 +66,40 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
       </section>
 
       <div className="mt-8 grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)]">
-        <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="border-l-4 border-[var(--usc-gold)] pl-4 text-2xl font-semibold text-slate-950">Research interests</h2>
-          <ul className="mt-5 flex flex-wrap gap-2">
-            {person.interests.map((interest) => (
-              <li className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-700" key={interest}>{interest}</li>
-            ))}
-          </ul>
-          {profileWebsiteUrl ? (
-            <div className="mt-6 border-t border-slate-200 pt-5">
-              <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Website</h2>
-              <a
-                aria-label={`Visit ${person.name}’s website.`}
-                className="mt-2 inline-block font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline"
-                href={profileWebsiteUrl}
-                rel="noreferrer"
-                target="_blank"
-              >
-                Personal website <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          ) : null}
-        </section>
+        {interests.length || profileWebsiteUrl ? (
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            {interests.length ? (
+              <>
+                <h2 className="border-l-4 border-[var(--usc-gold)] pl-4 text-2xl font-semibold text-slate-950">Research interests</h2>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {interests.map((interest) => (
+                    <li className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-700" key={interest}>{interest}</li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+            {profileWebsiteUrl ? (
+              <div className={interests.length ? "mt-6 border-t border-slate-200 pt-5" : ""}>
+                <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-500">Website</h2>
+                <a
+                  aria-label={`Visit ${person.name}’s website.`}
+                  className="mt-2 inline-block font-semibold text-[var(--usc-cardinal)] underline-offset-4 hover:underline"
+                  href={profileWebsiteUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Personal website <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            ) : null}
+          </section>
+        ) : null}
 
-        {person.selectedWorks?.length ? (
+        {selectedWorks?.length ? (
           <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="border-l-4 border-[var(--usc-gold)] pl-4 text-2xl font-semibold text-slate-950">Selected work</h2>
             <ol className="mt-5 divide-y divide-slate-200">
-              {person.selectedWorks.map((work, index) => (
+              {selectedWorks.map((work, index) => (
                 <li className="grid grid-cols-[2rem_1fr] gap-3 py-4 first:pt-0 last:pb-0" key={`${work.title}-${index}`}>
                   <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-xs font-semibold tabular-nums text-[var(--usc-cardinal)]" aria-hidden="true">
                     {index + 1}

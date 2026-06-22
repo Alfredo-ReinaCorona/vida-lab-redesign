@@ -15,14 +15,17 @@ export type Person = {
   slug: string;
   role?: string;
   displayRole?: string;
-  group: "Faculty director" | "phd" | "ms" | "undergrad";
+  group: "Faculty director" | "phd" | "ms" | "former-phd" | "former-ms" | "former-undergrad";
   cardSummary?: string;
+  imageSrc?: string;
   biography?: string[];
+  researchInterests?: string[];
   interests: string[];
   website?: string;
   websiteUrl?: string;
   linkedinUrl?: string;
   googleScholarUrl?: string;
+  selectedWork?: SelectedWork[];
   selectedWorks?: SelectedWork[];
   placeholder: boolean;
 };
@@ -51,6 +54,7 @@ export const people: Person[] = [
   },
   {
     name: "Merve Atasever",
+    displayRole: "Ph.D. Student",
     slug: "merve-atasever",
     group: "phd",
     cardSummary: "Works on reinforcement learning, representation learning, multi-agent settings, and robotics.",
@@ -70,8 +74,9 @@ export const people: Person[] = [
   },
   {
     name: "Yuan Xia",
+    displayRole: "Former Ph.D. Student",
     slug: "yuan-xia",
-    group: "phd",
+    group: "former-phd",
     cardSummary: "Researches large language models, multimodal AI, autonomous driving, distributed systems, and software engineering.",
     biography: [
       "Yuan Xia is pursuing a Ph.D. in Computer Science at the University of Southern California. Her research spans large language models, multimodal AI, autonomous driving, distributed systems, and software engineering. She leads a student group at CPS-VIDA Lab developing LLMs for perception-system monitoring, driving-event detection, and program synthesis. She previously interned at Bell Labs, where she worked on machine-learning research focused on LLM logical reasoning.",
@@ -89,8 +94,9 @@ export const people: Person[] = [
   },
   {
     name: "Navid Hashemi",
+    displayRole: "Former Ph.D. Student",
     slug: "navid-hashemi",
-    group: "phd",
+    group: "former-phd",
     cardSummary: "Studies artificial intelligence and temporal logics for verification and neurosymbolic reinforcement learning.",
     biography: [
       "Navid Hashemi’s research lies at the intersection of artificial intelligence and temporal logics, with applications in formal verification of learning-enabled systems and neurosymbolic reinforcement learning.",
@@ -108,8 +114,9 @@ export const people: Person[] = [
   },
   {
     name: "Xin Qin",
+    displayRole: "Former Ph.D. Student",
     slug: "xin-qin",
-    group: "phd",
+    group: "former-phd",
     cardSummary: "Focuses on predictive monitoring, robust testing, verification, formal methods, and machine learning.",
     interests: ["Predictive monitoring", "Robust testing", "Verification", "Formal methods", "Machine learning"],
     website: "https://xinqin23.github.io/",
@@ -124,6 +131,7 @@ export const people: Person[] = [
   },
   {
     name: "Yiqi “Nick” Zhao",
+    displayRole: "Ph.D. Student",
     slug: "yiqi-zhao",
     group: "phd",
     cardSummary: "Works on design, verification, and testing of learning-enabled cyber-physical systems.",
@@ -143,6 +151,7 @@ export const people: Person[] = [
   },
   {
     name: "Sam Williams",
+    displayRole: "Ph.D. Student",
     slug: "sam-williams",
     group: "phd",
     cardSummary: "Applies game theory to strategic behavior in multi-agent cyber-physical systems.",
@@ -161,6 +170,7 @@ export const people: Person[] = [
   },
   {
     name: "Sheryl Paul",
+    displayRole: "Ph.D. Student",
     slug: "sheryl-paul",
     group: "phd",
     cardSummary: "Researches policy making, reinforcement learning, game theory, and societal applications of AI.",
@@ -179,9 +189,42 @@ export const people: Person[] = [
     placeholder: false,
   },
   {
-    name: "Anand Balakrishnan",
-    slug: "anand-balakrishnan",
+    name: "Vidisha Kudalkar",
+    slug: "vidisha-kudalkar",
+    displayRole: "Ph.D. Student",
     group: "phd",
+    interests: [],
+    placeholder: true,
+  },
+  {
+    name: "Iurii Biktairov",
+    slug: "iurii-biktairov",
+    displayRole: "Ph.D. Student",
+    group: "phd",
+    interests: [],
+    placeholder: true,
+  },
+  {
+    name: "Edward Kim",
+    slug: "edward-kim",
+    displayRole: "Ph.D. Student",
+    group: "phd",
+    interests: [],
+    placeholder: true,
+  },
+  {
+    name: "Ryan Rubel",
+    slug: "ryan-rubel",
+    displayRole: "Ph.D. Student",
+    group: "phd",
+    interests: [],
+    placeholder: true,
+  },
+  {
+    name: "Anand Balakrishnan",
+    displayRole: "Former Ph.D. Student",
+    slug: "anand-balakrishnan",
+    group: "former-phd",
     cardSummary: "Designs and verifies autonomous and learning-enabled systems using formal specifications.",
     biography: [
       "Anand Balakrishnan is a Ph.D. candidate in Computer Science advised by Jyotirmoy Deshmukh. His research interests lie in the design and verification of autonomous systems using formal specifications, particularly learning-enabled systems. His current work focuses on reinforcement-learning-based controller synthesis for time-sensitive and safety-critical tasks encoded as temporal logics or automata, and the use of formal logic to monitor perception-based systems.",
@@ -196,6 +239,22 @@ export const people: Person[] = [
     linkedinUrl: "https://www.linkedin.com/in/anandb1597",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=egagNkwAAAAJ",
     placeholder: false,
+  },
+  {
+    name: "Aniruddh Puranic",
+    slug: "aniruddh-puranic",
+    displayRole: "Former Ph.D. Student",
+    group: "former-phd",
+    interests: [],
+    placeholder: true,
+  },
+  {
+    name: "Sara Mohammadinejad",
+    slug: "sara-mohammadinejad",
+    displayRole: "Former Ph.D. Student",
+    group: "former-phd",
+    interests: [],
+    placeholder: true,
   },
   {
     name: "Alfredo Reina Corona",
@@ -237,14 +296,38 @@ export const people: Person[] = [
     placeholder: false,
   },
   {
+    name: "Mihir Nitin Kulkarni",
+    slug: "mihir-nitin-kulkarni",
+    displayRole: "Former M.S. Student",
+    group: "former-ms",
+    interests: [],
+    placeholder: true,
+  },
+  {
+    name: "Qingpei Li",
+    slug: "qingpei-li",
+    displayRole: "Former M.S. Student",
+    group: "former-ms",
+    interests: [],
+    placeholder: true,
+  },
+  {
     name: "Richard Yang",
     slug: "richard-yang",
-    displayRole: "Visiting Researcher · University of Florida",
-    group: "undergrad",
+    displayRole: "Former Undergraduate Student",
+    group: "former-undergrad",
     interests: ["Robotics"],
     websiteUrl: "https://riyang25.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/yangricharduf/",
     placeholder: false,
+  },
+  {
+    name: "Celina Wang",
+    slug: "celina-wang",
+    displayRole: "Former Undergraduate Student",
+    group: "former-undergrad",
+    interests: [],
+    placeholder: true,
   },
 
 ];
