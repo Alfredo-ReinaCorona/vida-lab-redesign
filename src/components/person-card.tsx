@@ -13,7 +13,13 @@ export function getInitials(name: string) {
     .toUpperCase();
 }
 
+export function getPersonRole(person: Person) {
+  return person.displayRole ?? person.role;
+}
+
 export function PersonCard({ person }: { person: Person }) {
+  const role = getPersonRole(person);
+
   return (
     <article className="group relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--usc-cardinal)] hover:shadow-md focus-within:border-[var(--usc-cardinal)]">
       <Link
@@ -24,10 +30,10 @@ export function PersonCard({ person }: { person: Person }) {
       <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)] transition group-hover:border-[var(--usc-cardinal)]">
         {getInitials(person.name)}
       </div>
-      <PersonSocialLinks person={person} className="relative z-20 mt-3" />
       <h3 className="mt-4 text-lg font-semibold text-slate-950">{person.name}</h3>
-      {person.role ? <p className="mt-1 text-sm font-medium text-[var(--usc-cardinal)]">{person.role}</p> : null}
-      <p className="mt-3 text-sm leading-6 text-slate-700">{person.cardSummary}</p>
+      {role ? <p className="mt-1 text-sm font-medium text-[var(--usc-cardinal)]">{role}</p> : null}
+      <PersonSocialLinks person={person} className="relative z-20 mt-3" />
+      {person.cardSummary ? <p className="mt-3 text-sm leading-6 text-slate-700">{person.cardSummary}</p> : null}
       {person.interests.length ? (
         <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${person.name} research interests`}>
           {person.interests.slice(0, 5).map((interest) => (

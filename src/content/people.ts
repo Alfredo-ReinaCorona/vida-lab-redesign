@@ -14,8 +14,9 @@ export type Person = {
   name: string;
   slug: string;
   role?: string;
-  group: "Faculty director" | "Lab members";
-  cardSummary: string;
+  displayRole?: string;
+  group: "Faculty director" | "phd" | "ms" | "undergrad";
+  cardSummary?: string;
   biography?: string[];
   interests: string[];
   website?: string;
@@ -50,7 +51,7 @@ export const people: Person[] = [
   {
     name: "Merve Atasever",
     slug: "merve-atasever",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Works on reinforcement learning, representation learning, multi-agent settings, and robotics.",
     biography: [
       "Following a double major in Mathematics and Physics at Bogazici University, Merve pursued a master’s degree in Differential Geometry at Istanbul Technical University. Before beginning doctoral studies at USC, she worked as a data scientist on several AI projects. Her research interests include reinforcement learning and robotics.",
@@ -69,7 +70,7 @@ export const people: Person[] = [
   {
     name: "Yuan Xia",
     slug: "yuan-xia",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Researches large language models, multimodal AI, autonomous driving, distributed systems, and software engineering.",
     biography: [
       "Yuan Xia is pursuing a Ph.D. in Computer Science at the University of Southern California. Her research spans large language models, multimodal AI, autonomous driving, distributed systems, and software engineering. She leads a student group at CPS-VIDA Lab developing LLMs for perception-system monitoring, driving-event detection, and program synthesis. She previously interned at Bell Labs, where she worked on machine-learning research focused on LLM logical reasoning.",
@@ -88,7 +89,7 @@ export const people: Person[] = [
   {
     name: "Navid Hashemi",
     slug: "navid-hashemi",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Studies artificial intelligence and temporal logics for verification and neurosymbolic reinforcement learning.",
     biography: [
       "Navid Hashemi’s research lies at the intersection of artificial intelligence and temporal logics, with applications in formal verification of learning-enabled systems and neurosymbolic reinforcement learning.",
@@ -107,7 +108,7 @@ export const people: Person[] = [
   {
     name: "Xin Qin",
     slug: "xin-qin",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Focuses on predictive monitoring, robust testing, verification, formal methods, and machine learning.",
     interests: ["Predictive monitoring", "Robust testing", "Verification", "Formal methods", "Machine learning"],
     website: "https://xinqin23.github.io/",
@@ -123,7 +124,7 @@ export const people: Person[] = [
   {
     name: "Yiqi “Nick” Zhao",
     slug: "yiqi-zhao",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Works on design, verification, and testing of learning-enabled cyber-physical systems.",
     biography: [
       "Yiqi Zhao is a Ph.D. student in Computer Science at the University of Southern California. He works with Professor Jyo Deshmukh and Professor Lars Lindemann. His research interests include design, verification, and testing of learning-enabled cyber-physical systems using formal-methods and control-theoretic approaches. Before USC, he studied at Vanderbilt University, majoring in Computer Science and Mathematics, Applied Track, with minors in Electrical Engineering and Data Science. At Vanderbilt, he worked with Professor Meiyi Ma on smart-city and specification-enhanced machine-learning research.",
@@ -142,7 +143,7 @@ export const people: Person[] = [
   {
     name: "Sam Williams",
     slug: "sam-williams",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Applies game theory to strategic behavior in multi-agent cyber-physical systems.",
     biography: [
       "Sam Williams is a Ph.D. student in Computer Science at the University of Southern California and a member of CPS-VIDA Lab. His research applies game theory to reason about strategic behavior in multi-agent cyber-physical systems. He received a B.S. in Computer Science from the University of Colorado Boulder in 2022.",
@@ -160,7 +161,7 @@ export const people: Person[] = [
   {
     name: "Sheryl Paul",
     slug: "sheryl-paul",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Researches policy making, reinforcement learning, game theory, and societal applications of AI.",
     biography: [
       "Sheryl Paul is a Ph.D. candidate interested in policy making, reinforcement learning, and game theory. She completed a bachelor’s degree in Computer Engineering at Mumbai University, where she worked on machine-learning projects. She earned an M.Sc. in Computer Science from the University of Oxford, with a thesis on the evolution of norms and game theory.",
@@ -179,7 +180,7 @@ export const people: Person[] = [
   {
     name: "Anand Balakrishnan",
     slug: "anand-balakrishnan",
-    group: "Lab members",
+    group: "phd",
     cardSummary: "Designs and verifies autonomous and learning-enabled systems using formal specifications.",
     biography: [
       "Anand Balakrishnan is a Ph.D. candidate in Computer Science advised by Jyotirmoy Deshmukh. His research interests lie in the design and verification of autonomous systems using formal specifications, particularly learning-enabled systems. His current work focuses on reinforcement-learning-based controller synthesis for time-sensitive and safety-critical tasks encoded as temporal logics or automata, and the use of formal logic to monitor perception-based systems.",
@@ -195,6 +196,53 @@ export const people: Person[] = [
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=egagNkwAAAAJ",
     placeholder: false,
   },
+  {
+    name: "Alfredo Reina Corona",
+    slug: "alfredo-reina-corona",
+    displayRole: "M.S. Graduate",
+    group: "ms",
+    interests: ["Robotics"],
+    linkedinUrl: "https://www.linkedin.com/in/alfredo-reina-corona-bb60a51a2",
+    placeholder: false,
+  },
+  {
+    name: "Cagan Bakirci",
+    slug: "cagan-bakirci",
+    displayRole: "M.S. Graduate",
+    group: "ms",
+    interests: ["Robotics"],
+    linkedinUrl: "https://www.linkedin.com/in/caganbakirci",
+    placeholder: false,
+  },
+  {
+    name: "Keyan Azbijari",
+    slug: "keyan-azbijari",
+    displayRole: "M.S. Student",
+    group: "ms",
+    interests: ["Robotics"],
+    linkedinUrl: "https://www.linkedin.com/in/keyan-azbijari-671b201bb",
+    placeholder: false,
+  },
+  {
+    name: "Tolga Izdas",
+    slug: "tolga-izdas",
+    displayRole: "M.S. Student",
+    group: "ms",
+    interests: ["Robotics"],
+    linkedinUrl: "https://www.linkedin.com/in/tolgaizdas",
+    googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=GXujHFgAAAAJ",
+    placeholder: false,
+  },
+  {
+    name: "Richard Yang",
+    slug: "richard-yang",
+    displayRole: "Visiting Researcher · University of Florida",
+    group: "undergrad",
+    interests: ["Robotics"],
+    linkedinUrl: "https://www.linkedin.com/in/yangricharduf/",
+    placeholder: false,
+  },
+
 ];
 
 export function getPersonBySlug(slug: string) {
