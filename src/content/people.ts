@@ -20,6 +20,7 @@ export type Person = {
   biography?: string[];
   interests: string[];
   website?: string;
+  websiteUrl?: string;
   linkedinUrl?: string;
   googleScholarUrl?: string;
   selectedWorks?: SelectedWork[];
@@ -202,6 +203,7 @@ export const people: Person[] = [
     displayRole: "M.S. Graduate",
     group: "ms",
     interests: ["Robotics"],
+    websiteUrl: "https://alfredoreinacorona.com/",
     linkedinUrl: "https://www.linkedin.com/in/alfredo-reina-corona-bb60a51a2",
     placeholder: false,
   },
@@ -211,6 +213,7 @@ export const people: Person[] = [
     displayRole: "M.S. Graduate",
     group: "ms",
     interests: ["Robotics"],
+    websiteUrl: "https://caganbakirci.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/caganbakirci",
     placeholder: false,
   },
@@ -239,6 +242,7 @@ export const people: Person[] = [
     displayRole: "Visiting Researcher · University of Florida",
     group: "undergrad",
     interests: ["Robotics"],
+    websiteUrl: "https://riyang25.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/yangricharduf/",
     placeholder: false,
   },
