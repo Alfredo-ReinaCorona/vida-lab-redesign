@@ -21,6 +21,10 @@ export type Person = {
   imagePosition?: string;
   biography?: string[];
   researchInterests?: string[];
+  currentEndeavors?: {
+    heading?: string;
+    body: string;
+  };
   interests: string[];
   website?: string;
   websiteUrl?: string;
@@ -82,6 +86,10 @@ export const people: Person[] = [
     biography: [
       "Yuan Xia is pursuing a Ph.D. in Computer Science at the University of Southern California. Her research spans large language models, multimodal AI, autonomous driving, distributed systems, and software engineering. She leads a student group at CPS-VIDA Lab developing LLMs for perception-system monitoring, driving-event detection, and program synthesis. She previously interned at Bell Labs, where she worked on machine-learning research focused on LLM logical reasoning.",
     ],
+    currentEndeavors: {
+      heading: "Recent Work",
+      body: "Yuan’s recent work explores formal reasoning with large language models, program synthesis, and automated verification. Her research has included work with Nokia Bell Labs and applied-scientist internship experience at Microsoft.",
+    },
     interests: ["Large language models", "Multimodal AI", "Software engineering"],
     website: "https://yuan-xia.github.io/cv/",
     linkedinUrl: "https://www.linkedin.com/in/yuan-xia-0227",
@@ -101,6 +109,9 @@ export const people: Person[] = [
     biography: [
       "Navid Hashemi’s research lies at the intersection of artificial intelligence and temporal logics, with applications in formal verification of learning-enabled systems and neurosymbolic reinforcement learning.",
     ],
+    currentEndeavors: {
+      body: "Navid is a Research Scientist at Apple. His recent public work includes machine-learning research on robust perception systems, probabilistic robustness analysis, and language and fairness.",
+    },
     interests: ["Signal temporal logic", "Neurosymbolic AI", "Verification", "Feedback model-based reinforcement learning", "Neural network robustness analysis", "Sensor-fault analysis in cyber-physical systems"],
     website: "https://navidhashemicodes.github.io",
     linkedinUrl: "https://www.linkedin.com/in/navid-hashemi-ph-d-919576153",
@@ -117,6 +128,9 @@ export const people: Person[] = [
     slug: "xin-qin",
     group: "former-phd",
     cardSummary: "Focuses on predictive monitoring, robust testing, verification, formal methods, and machine learning.",
+    currentEndeavors: {
+      body: "Xin is an Assistant Professor in the Department of Computer Engineering and Computer Science at California State University, Long Beach. Her research develops methods for safer cyber-physical systems through formal methods, predictive monitoring, verification, and machine learning.",
+    },
     interests: ["Predictive monitoring", "Robust testing", "Verification", "Formal methods", "Machine learning"],
     website: "https://xinqin23.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/xin-qin-4a83b9158",
@@ -253,6 +267,9 @@ export const people: Person[] = [
     biography: [
       "Anand Balakrishnan is a Ph.D. candidate in Computer Science advised by Jyotirmoy Deshmukh. His research interests lie in the design and verification of autonomous systems using formal specifications, particularly learning-enabled systems. His current work focuses on reinforcement-learning-based controller synthesis for time-sensitive and safety-critical tasks encoded as temporal logics or automata, and the use of formal logic to monitor perception-based systems.",
     ],
+    currentEndeavors: {
+      body: "Anand is a Postdoctoral Fellow at The University of Texas at Austin. His work combines formal methods and modern AI to design and verify learning-enabled cyber-physical systems, with interests in safe reinforcement learning, temporal logic, robotics, and assured autonomy.",
+    },
     interests: ["Autonomous systems", "Formal specifications", "Learning-enabled systems", "Reinforcement learning", "Perception monitoring"],
     website: "https://anandb.dev",
     selectedWorks: [
@@ -268,6 +285,9 @@ export const people: Person[] = [
     name: "Aniruddh Puranic",
     slug: "aniruddh-puranic",
     group: "former-phd",
+    currentEndeavors: {
+      body: "Aniruddh is a Scientist I in Next-Gen Robotics at Lila Sciences. He builds autonomous and intelligent robotic systems that accelerate scientific discovery through AI and automation, with work spanning neuro-symbolic AI, reinforcement and imitation learning, formal methods, and safe multi-agent autonomy.",
+    },
     interests: [],
     websiteUrl: "https://aniruddh-puranic.info/",
     linkedinUrl: "https://www.linkedin.com/in/andyruddh",
@@ -283,6 +303,9 @@ export const people: Person[] = [
     name: "Sara Mohammadinejad",
     slug: "sara-mohammadinejad",
     group: "former-phd",
+    currentEndeavors: {
+      body: "Sara is a Senior Member of Technical Staff in GenAI and Machine Learning at Oracle. Her work advances machine-learning and generative-AI capabilities for MySQL HeatWave, including LLM integration, natural-language-to-ML workflows, vision-language models, MySQL AI, and log-anomaly detection.",
+    },
     interests: [],
     linkedinUrl: "https://www.linkedin.com/in/sara-mohammadinejad-26271417b",
     selectedWorks: [
