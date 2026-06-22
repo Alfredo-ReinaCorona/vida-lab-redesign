@@ -18,6 +18,7 @@ export type Person = {
   group: "Faculty director" | "phd" | "ms" | "former-phd" | "former-ms" | "former-undergrad";
   cardSummary?: string;
   imageSrc?: string;
+  imagePosition?: string;
   biography?: string[];
   researchInterests?: string[];
   interests: string[];
@@ -34,6 +35,7 @@ export const people: Person[] = [
   {
     name: "Jyotirmoy V. Deshmukh",
     slug: "jyotirmoy-deshmukh",
+    imageSrc: "/images/people/jyo.png",
     role: "Associate Professor, Department of Computer Science; Research Director, CPS-VIDA Lab; Co-Director, Center for Autonomy and AI",
     group: "Faculty director",
     cardSummary:
@@ -54,7 +56,7 @@ export const people: Person[] = [
   },
   {
     name: "Merve Atasever",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Merve.jpg",
     slug: "merve-atasever",
     group: "phd",
     cardSummary: "Works on reinforcement learning, representation learning, multi-agent settings, and robotics.",
@@ -74,7 +76,6 @@ export const people: Person[] = [
   },
   {
     name: "Yuan Xia",
-    displayRole: "Former Ph.D. Student",
     slug: "yuan-xia",
     group: "former-phd",
     cardSummary: "Researches large language models, multimodal AI, autonomous driving, distributed systems, and software engineering.",
@@ -94,7 +95,6 @@ export const people: Person[] = [
   },
   {
     name: "Navid Hashemi",
-    displayRole: "Former Ph.D. Student",
     slug: "navid-hashemi",
     group: "former-phd",
     cardSummary: "Studies artificial intelligence and temporal logics for verification and neurosymbolic reinforcement learning.",
@@ -114,7 +114,6 @@ export const people: Person[] = [
   },
   {
     name: "Xin Qin",
-    displayRole: "Former Ph.D. Student",
     slug: "xin-qin",
     group: "former-phd",
     cardSummary: "Focuses on predictive monitoring, robust testing, verification, formal methods, and machine learning.",
@@ -131,7 +130,7 @@ export const people: Person[] = [
   },
   {
     name: "Yiqi “Nick” Zhao",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Yiqi.JPG",
     slug: "yiqi-zhao",
     group: "phd",
     cardSummary: "Works on design, verification, and testing of learning-enabled cyber-physical systems.",
@@ -151,7 +150,7 @@ export const people: Person[] = [
   },
   {
     name: "Sam Williams",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Sam.jpg",
     slug: "sam-williams",
     group: "phd",
     cardSummary: "Applies game theory to strategic behavior in multi-agent cyber-physical systems.",
@@ -170,7 +169,7 @@ export const people: Person[] = [
   },
   {
     name: "Sheryl Paul",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Sheryl.JPG",
     slug: "sheryl-paul",
     group: "phd",
     cardSummary: "Researches policy making, reinforcement learning, game theory, and societal applications of AI.",
@@ -191,7 +190,7 @@ export const people: Person[] = [
   {
     name: "Vidisha Kudalkar",
     slug: "vidisha-kudalkar",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Vidisha.jpg",
     group: "phd",
     interests: [],
     placeholder: true,
@@ -199,7 +198,7 @@ export const people: Person[] = [
   {
     name: "Iurii Biktairov",
     slug: "iurii-biktairov",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Iurii.jpg",
     group: "phd",
     interests: [],
     placeholder: true,
@@ -207,7 +206,7 @@ export const people: Person[] = [
   {
     name: "Edward Kim",
     slug: "edward-kim",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Edward.jpg",
     group: "phd",
     interests: [],
     placeholder: true,
@@ -215,14 +214,13 @@ export const people: Person[] = [
   {
     name: "Ryan Rubel",
     slug: "ryan-rubel",
-    displayRole: "Ph.D. Student",
+    imageSrc: "/images/people/Ryan.jpg",
     group: "phd",
     interests: [],
     placeholder: true,
   },
   {
     name: "Anand Balakrishnan",
-    displayRole: "Former Ph.D. Student",
     slug: "anand-balakrishnan",
     group: "former-phd",
     cardSummary: "Designs and verifies autonomous and learning-enabled systems using formal specifications.",
@@ -243,7 +241,6 @@ export const people: Person[] = [
   {
     name: "Aniruddh Puranic",
     slug: "aniruddh-puranic",
-    displayRole: "Former Ph.D. Student",
     group: "former-phd",
     interests: [],
     placeholder: true,
@@ -251,7 +248,6 @@ export const people: Person[] = [
   {
     name: "Sara Mohammadinejad",
     slug: "sara-mohammadinejad",
-    displayRole: "Former Ph.D. Student",
     group: "former-phd",
     interests: [],
     placeholder: true,
@@ -279,7 +275,6 @@ export const people: Person[] = [
   {
     name: "Keyan Azbijari",
     slug: "keyan-azbijari",
-    displayRole: "M.S. Student",
     group: "ms",
     interests: ["Robotics"],
     linkedinUrl: "https://www.linkedin.com/in/keyan-azbijari-671b201bb",
@@ -288,7 +283,6 @@ export const people: Person[] = [
   {
     name: "Tolga Izdas",
     slug: "tolga-izdas",
-    displayRole: "M.S. Student",
     group: "ms",
     interests: ["Robotics"],
     linkedinUrl: "https://www.linkedin.com/in/tolgaizdas",
@@ -298,7 +292,6 @@ export const people: Person[] = [
   {
     name: "Mihir Nitin Kulkarni",
     slug: "mihir-nitin-kulkarni",
-    displayRole: "Former M.S. Student",
     group: "former-ms",
     interests: [],
     placeholder: true,
@@ -306,7 +299,6 @@ export const people: Person[] = [
   {
     name: "Qingpei Li",
     slug: "qingpei-li",
-    displayRole: "Former M.S. Student",
     group: "former-ms",
     interests: [],
     placeholder: true,
@@ -314,7 +306,6 @@ export const people: Person[] = [
   {
     name: "Richard Yang",
     slug: "richard-yang",
-    displayRole: "Former Undergraduate Student",
     group: "former-undergrad",
     interests: ["Robotics"],
     websiteUrl: "https://riyang25.github.io/",
@@ -324,7 +315,6 @@ export const people: Person[] = [
   {
     name: "Celina Wang",
     slug: "celina-wang",
-    displayRole: "Former Undergraduate Student",
     group: "former-undergrad",
     interests: [],
     placeholder: true,

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Person } from "@/content/people";
 import { PersonSocialLinks } from "@/components/social-links";
+import { withBasePath } from "@/lib/paths";
 
 export function getInitials(name: string) {
   return name
@@ -30,11 +31,12 @@ export function PersonCard({ person }: { person: Person }) {
       />
       {person.imageSrc ? (
         <Image
-          src={person.imageSrc}
+          src={withBasePath(person.imageSrc)}
           alt={`${person.name} headshot`}
           width={64}
           height={64}
           className="h-16 w-16 rounded-xl border border-[var(--usc-gold)] object-cover transition group-hover:border-[var(--usc-cardinal)]"
+          style={person.imagePosition ? { objectPosition: person.imagePosition } : undefined}
         />
       ) : (
         <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)] transition group-hover:border-[var(--usc-cardinal)]">

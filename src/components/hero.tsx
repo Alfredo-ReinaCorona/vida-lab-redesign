@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/paths";
 
 export function Hero() {
   return (
@@ -12,17 +14,15 @@ export function Hero() {
           <a className="rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-white" href="https://www.cs.usc.edu/" rel="noreferrer" target="_blank">USC Computer Science</a>
         </div>
       </div>
-      <div className="relative min-h-80 overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm" aria-label="Abstract technical system diagram">
-        <div className="absolute inset-0 bg-[linear-gradient(#e2e8f0_1px,transparent_1px),linear-gradient(90deg,#e2e8f0_1px,transparent_1px)] bg-[size:32px_32px]" />
-        <div className="relative grid h-full place-items-center">
-          <svg viewBox="0 0 420 300" role="img" aria-labelledby="hero-diagram-title" className="w-full max-w-md">
-            <title id="hero-diagram-title">Abstract network of verified system states</title>
-            <g fill="none" stroke="#990000" strokeWidth="3"><path d="M70 220 C140 95 240 250 340 80"/><path d="M90 80 L180 150 L260 105 L340 205"/></g>
-            <g fill="#fff" stroke="#172033" strokeWidth="3">{[[70,220],[90,80],[180,150],[260,105],[340,80],[340,205]].map(([cx,cy]) => <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="18" />)}</g>
-            <g fill="#172033"><rect x="135" y="34" width="150" height="34" rx="17"/><rect x="120" y="238" width="180" height="34" rx="17"/></g>
-            <g fill="#fff" fontSize="13" fontFamily="Arial"><text x="157" y="56">specification</text><text x="157" y="260">verification</text></g>
-          </svg>
-        </div>
+      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+        <Image
+          src={withBasePath("/images/lab-group.jpg")}
+          alt="CPS-VIDA Lab group photo."
+          width={960}
+          height={720}
+          priority
+          className="h-full w-full rounded-2xl object-contain"
+        />
       </div>
     </section>
   );
