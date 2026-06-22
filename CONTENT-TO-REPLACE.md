@@ -42,3 +42,14 @@ The following content is intentionally placeholder, incomplete, or provisional a
 - USC department/school affiliation text, mailing address, office location, and contact email.
 - Recruiting/joining instructions and any current openings.
 - Final approved project descriptions, sponsor acknowledgments, and collaborator wording.
+
+## Current Ph.D. student headshots and biographies needed
+
+- Merve Atasever
+- Sheryl Paul
+- Vidisha Kudalkar
+- Yiqi Zhao
+- Sam Williams
+- Iurii Biktairov
+- Edward Kim
+- Ryan Rubel

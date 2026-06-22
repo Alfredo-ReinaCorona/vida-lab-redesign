@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Person } from "@/content/people";
 import { PersonSocialLinks } from "@/components/social-links";
@@ -27,9 +28,19 @@ export function PersonCard({ person }: { person: Person }) {
         className="absolute inset-0 z-10 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]"
         aria-label={`View ${person.name}'s profile`}
       />
-      <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)] transition group-hover:border-[var(--usc-cardinal)]">
-        {getInitials(person.name)}
-      </div>
+      {person.imageSrc ? (
+        <Image
+          src={person.imageSrc}
+          alt={`${person.name} headshot`}
+          width={64}
+          height={64}
+          className="h-16 w-16 rounded-xl border border-[var(--usc-gold)] object-cover transition group-hover:border-[var(--usc-cardinal)]"
+        />
+      ) : (
+        <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl border border-[var(--usc-gold)] bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)] transition group-hover:border-[var(--usc-cardinal)]">
+          {getInitials(person.name)}
+        </div>
+      )}
       <h3 className="mt-4 text-lg font-semibold text-slate-950">{person.name}</h3>
       {role ? <p className="mt-1 text-sm font-medium text-[var(--usc-cardinal)]">{role}</p> : null}
       <PersonSocialLinks person={person} className="relative z-20 mt-3" />
