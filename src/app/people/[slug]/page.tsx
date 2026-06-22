@@ -40,6 +40,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
   const profileWebsiteUrl = person.websiteUrl ?? person.website;
   const interests = person.researchInterests ?? person.interests;
   const selectedWorks = selectedWorkProfileSlugs.has(person.slug) ? (person.selectedWork ?? person.selectedWorks) : undefined;
+  const currentEndeavors = person.group === "former-phd" ? person.currentEndeavors : undefined;
 
   return (
     <main className="mx-auto max-w-5xl px-5 py-12">
@@ -73,6 +74,14 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
               <div className="mt-6 space-y-4 text-base leading-8 text-slate-700">
                 {(person.biography?.length ? person.biography : [person.cardSummary]).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
+            ) : null}
+            {currentEndeavors ? (
+              <section className="mt-6 border-t border-slate-200 pt-5" aria-labelledby={`${person.slug}-current-endeavors`}>
+                <h2 id={`${person.slug}-current-endeavors`} className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+                  {currentEndeavors.heading ?? "Current Endeavors"}
+                </h2>
+                <p className="mt-3 text-base leading-8 text-slate-700">{currentEndeavors.body}</p>
+              </section>
             ) : null}
           </div>
         </div>
