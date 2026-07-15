@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getInitials, getPersonRole } from "@/components/person-card";
 import { PersonSocialLinks } from "@/components/social-links";
-import { getPersonBySlug, people } from "@/content/people";
+import { getPersonBySlug } from "@/content/people";
 import { withBasePath } from "@/lib/paths";
 
 const selectedWorkProfileSlugs = new Set([
@@ -18,7 +18,7 @@ const selectedWorkProfileSlugs = new Set([
 ]);
 
 export function generateStaticParams() {
-  return people.map((person) => ({ slug: person.slug }));
+  return [{ slug: "jyotirmoy-deshmukh" }];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -33,7 +33,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
   const { slug } = await params;
   const person = getPersonBySlug(slug);
 
-  if (!person) notFound();
+  if (!person || person.slug !== "jyotirmoy-deshmukh") notFound();
 
   const role = getPersonRole(person);
   const hasNarrative = Boolean(person.biography?.length || person.cardSummary);
