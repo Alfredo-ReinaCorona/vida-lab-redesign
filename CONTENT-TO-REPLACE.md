@@ -53,3 +53,19 @@ The following content is intentionally placeholder, incomplete, or provisional a
 - Iurii Biktairov
 - Edward Kim
 - Ryan Rubel
+
+## Personal website needed for People-card navigation
+
+- Sheryl Paul
+- Vidisha Kudalkar
+- Iurii Biktairov
+- Ryan Rubel
+
+## Personal website needed for People-list navigation
+
+- Keyan Azbijari
+- Tolga Izdas
+- Mihir Nitin Kulkarni
+- Qingpei Li
+- Sara Mohammadinejad
+- Celina Wang

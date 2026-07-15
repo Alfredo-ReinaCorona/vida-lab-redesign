@@ -40,7 +40,7 @@ export const people: Person[] = [
     name: "Jyotirmoy V. Deshmukh",
     slug: "jyotirmoy-deshmukh",
     imageSrc: "/images/people/jyo.png",
-    role: "Associate Professor, Department of Computer Science; Research Director, CPS-VIDA Lab; Co-Director, Center for Autonomy and AI",
+    role: "Associate Professor, Department of Computer Science; Director of CPS-VIDA Lab; Co-director of the Center for Autonomy and AI",
     group: "Faculty director",
     cardSummary:
       "Applies formal methods to cyber-physical systems, embedded control systems, temporal logics, and time-series analysis.",
@@ -63,12 +63,12 @@ export const people: Person[] = [
     imageSrc: "/images/people/Merve.jpg",
     slug: "merve-atasever",
     group: "phd",
-    cardSummary: "Works on reinforcement learning, representation learning, multi-agent settings, and robotics.",
+    cardSummary: "Merve completed a double major in Mathematics and Physics at Bogazici University and a master’s degree in Differential Geometry at Istanbul Technical University. Before beginning doctoral studies at USC, she worked as a data scientist on AI projects. Her research interests include reinforcement learning and robotics.",
     biography: [
       "Following a double major in Mathematics and Physics at Bogazici University, Merve pursued a master’s degree in Differential Geometry at Istanbul Technical University. Before beginning doctoral studies at USC, she worked as a data scientist on several AI projects. Her research interests include reinforcement learning and robotics.",
     ],
     interests: ["Multi-agent reinforcement learning", "Representation learning", "Robotics"],
-    website: "https://merveatasever.github.io/Home.html",
+    websiteUrl: "https://merveatasever.github.io/Home.html",
     selectedWorks: [
       { title: "Motion Planning for Automata-based Objectives using Efficient Gradient-based Methods", venue: "IROS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] },
       { title: "Coordinating Spinal and Limb Dynamics for Enhanced Sprawling Robot Mobility", venue: "arXiv preprint", year: "2025", links: [{ label: "Paper", href: "https://arxiv.org/abs/2504.14103" }] },
@@ -147,12 +147,12 @@ export const people: Person[] = [
     imageSrc: "/images/people/Yiqi.JPG",
     slug: "yiqi-zhao",
     group: "phd",
-    cardSummary: "Works on design, verification, and testing of learning-enabled cyber-physical systems.",
+    cardSummary: "Yiqi Zhao is a USC Computer Science Ph.D. student working with Professor Jyo Deshmukh and Professor Lars Lindemann. His research focuses on design, verification, and testing of learning-enabled cyber-physical systems using formal-methods and control-theoretic approaches. Before USC, he studied computer science and mathematics at Vanderbilt University.",
     biography: [
       "Yiqi Zhao is a Ph.D. student in Computer Science at the University of Southern California. He works with Professor Jyo Deshmukh and Professor Lars Lindemann. His research interests include design, verification, and testing of learning-enabled cyber-physical systems using formal-methods and control-theoretic approaches. Before USC, he studied at Vanderbilt University, majoring in Computer Science and Mathematics, Applied Track, with minors in Electrical Engineering and Data Science. At Vanderbilt, he worked with Professor Meiyi Ma on smart-city and specification-enhanced machine-learning research.",
     ],
     interests: ["Formal methods", "Cyber-physical systems", "Systems and control theory", "Mathematical optimization"],
-    website: "https://zhaoy37.github.io/",
+    websiteUrl: "https://zhaoy37.github.io/",
     selectedWorks: [
       { title: "Conformal Predictive Programming for Chance Constrained Optimization", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2402.07407" }, { label: "Code", href: "https://github.com/SAIDS-Lab/Conformal-Predictive-Programming-for-CCO" }] },
       { title: "Robust Conformal Prediction for STL Runtime Verification under Distribution Shift", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2311.09482" }, { label: "Code", href: "https://github.com/SAIDS-Lab/Robust-Conformal-Prediction-for-STL-Runtime-Verification-under-Distribution-Shift" }] },
@@ -167,12 +167,12 @@ export const people: Person[] = [
     imageSrc: "/images/people/Sam.jpg",
     slug: "sam-williams",
     group: "phd",
-    cardSummary: "Applies game theory to strategic behavior in multi-agent cyber-physical systems.",
+    cardSummary: "Sam Williams is a USC Computer Science Ph.D. student and CPS-VIDA Lab member. His research applies game theory to reason about strategic behavior in multi-agent cyber-physical systems. He received a B.S. in Computer Science from the University of Colorado Boulder in 2022.",
     biography: [
       "Sam Williams is a Ph.D. student in Computer Science at the University of Southern California and a member of CPS-VIDA Lab. His research applies game theory to reason about strategic behavior in multi-agent cyber-physical systems. He received a B.S. in Computer Science from the University of Colorado Boulder in 2022.",
     ],
     interests: ["Formal methods", "Game theory", "Multi-agent systems", "Optimization"],
-    website: "https://sjwil.github.io/personal-site/",
+    websiteUrl: "https://sjwil.github.io/personal-site/",
     linkedinUrl: "https://www.linkedin.com/in/sam-williams-ab18a1171",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=draxNowAAAAJ",
     selectedWorks: [
@@ -186,7 +186,7 @@ export const people: Person[] = [
     imageSrc: "/images/people/Sheryl.JPG",
     slug: "sheryl-paul",
     group: "phd",
-    cardSummary: "Researches policy making, reinforcement learning, game theory, and societal applications of AI.",
+    cardSummary: "Sheryl Paul is a Ph.D. candidate interested in policy making, reinforcement learning, and game theory. Her doctoral research focuses on evolutionary games in reinforcement-learning settings for pathfinding and distribution shift, with additional work on societal applications of AI, formal methods, and signal temporal logic.",
     biography: [
       "Sheryl Paul is a Ph.D. candidate interested in policy making, reinforcement learning, and game theory. She completed a bachelor’s degree in Computer Engineering at Mumbai University, where she worked on machine-learning projects. She earned an M.Sc. in Computer Science from the University of Oxford, with a thesis on the evolution of norms and game theory.",
       "Her doctoral research focuses on evolutionary games in reinforcement-learning settings for pathfinding and distribution shift. She has also worked on societal applications of AI and game theory, including pandemic models for compliance with government restrictions and methods for incentivizing sustainable behavior. She has additionally collaborated on projects involving formal methods and signal temporal logic.",
