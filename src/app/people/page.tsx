@@ -1,11 +1,13 @@
-import { PersonCard } from "@/components/person-card";
+import Image from "next/image";
+import { PersonCard, getInitials } from "@/components/person-card";
 import { PersonSocialLinks } from "@/components/social-links";
+import { withBasePath } from "@/lib/paths";
 import { people, type Person } from "@/content/people";
 
 type PeopleSection = { title: string; groups: Person["group"][]; presentation?: "cards" | "list" };
 
 const sections: PeopleSection[] = [
-  { title: "Faculty director", groups: ["Faculty director"], presentation: "cards" },
+  { title: "Faculty Director", groups: ["Faculty director"], presentation: "cards" },
   { title: "Ph.D. Students", groups: ["phd"], presentation: "cards" },
   { title: "M.S. Students", groups: ["ms"], presentation: "list" },
   { title: "Undergraduate Students", groups: ["undergrad"], presentation: "list" },
@@ -26,20 +28,57 @@ function getPeopleForGroups(groups: Person["group"][]) {
   return [...groupPeople].sort((first, second) => (orderedNames.indexOf(first.name) === -1 ? Number.MAX_SAFE_INTEGER : orderedNames.indexOf(first.name)) - (orderedNames.indexOf(second.name) === -1 ? Number.MAX_SAFE_INTEGER : orderedNames.indexOf(second.name)));
 }
 
+function PersonRosterImage({ person }: { person: Person }) {
+  if (person.imageSrc) {
+    return (
+      <Image
+        src={withBasePath(person.imageSrc)}
+        alt={`${person.name} headshot`}
+        width={72}
+        height={72}
+        className="h-16 w-16 shrink-0 rounded-lg object-cover sm:h-[72px] sm:w-[72px]"
+        style={person.imagePosition ? { objectPosition: person.imagePosition } : undefined}
+      />
+    );
+  }
+
+  return (
+    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-[var(--profile-tile)] text-lg font-semibold text-[var(--usc-cardinal)] sm:h-[72px] sm:w-[72px]">
+      {getInitials(person.name)}
+    </div>
+  );
+}
+
 function PeopleList({ section }: { section: PeopleSection }) {
   const sectionPeople = getPeopleForGroups(section.groups);
   if (!sectionPeople.length) return null;
   return (
     <section className="mt-10">
       <h2 className="border-l-4 border-[var(--usc-gold)] pl-4 text-2xl font-semibold text-slate-950">{section.title}</h2>
-      <ul className="mt-5 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+      <ul className="mt-6 space-y-6 sm:space-y-7">
         {sectionPeople.map((person) => {
           const website = getWebsite(person);
           return (
-            <li key={person.slug} className="relative flex items-center justify-between gap-4 px-5 py-4 transition hover:bg-slate-50 focus-within:bg-slate-50">
-              {website ? <a aria-label={`Visit ${person.name}'s website`} className="absolute inset-0 z-10 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]" href={website} rel="noreferrer" target="_blank" /> : null}
-              <span className="font-semibold text-slate-950">{person.name}</span>
-              <PersonSocialLinks person={person} includeWebsite className="relative z-20 shrink-0" />
+            <li key={person.slug}>
+              <article className="group relative flex items-start gap-4 sm:gap-5">
+                {website ? (
+                  <a
+                    aria-label={`Visit ${person.name}'s website`}
+                    className="absolute inset-0 z-10 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--usc-cardinal)]"
+                    href={website}
+                    rel="noreferrer"
+                    target="_blank"
+                  />
+                ) : null}
+                <PersonRosterImage person={person} />
+                <div className="min-w-0 flex-1 pt-0.5">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <h3 className="text-base font-semibold leading-6 text-slate-950 sm:text-lg">{person.name}</h3>
+                    <PersonSocialLinks person={person} includeWebsite className="relative z-20" compact />
+                  </div>
+                  {person.listSubtitle ? <p className="mt-1 text-sm leading-6 text-slate-700">{person.listSubtitle}</p> : null}
+                </div>
+              </article>
             </li>
           );
         })}

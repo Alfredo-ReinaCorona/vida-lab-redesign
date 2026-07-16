@@ -22,13 +22,13 @@ function getSocialLinks(person: Person, includeWebsite: boolean): SocialLink[] {
   return links;
 }
 
-export function PersonSocialLinks({ person, className = "", includeWebsite = false }: { person: Person; className?: string; includeWebsite?: boolean }) {
+export function PersonSocialLinks({ person, className = "", includeWebsite = false, compact = false }: { person: Person; className?: string; includeWebsite?: boolean; compact?: boolean }) {
   const socialLinks = getSocialLinks(person, includeWebsite);
   if (!socialLinks.length) return null;
   return (
     <div className={`flex flex-wrap gap-2 ${className}`} aria-label={`${person.name} professional links`}>
       {socialLinks.map((link) => (
-        <a aria-label={link.label} className="group/social relative inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-2.5 py-1.5 text-slate-700 shadow-sm transition hover:border-[var(--usc-cardinal)] hover:text-[var(--usc-cardinal)] focus-visible:border-[var(--usc-cardinal)] focus-visible:text-[var(--usc-cardinal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]" href={link.href} key={`${link.name}-${link.href}`} rel="noreferrer" target="_blank">
+        <a aria-label={link.label} className={compact ? "group/social relative inline-flex items-center justify-center rounded-full p-1.5 text-slate-600 transition hover:text-[var(--usc-cardinal)] focus-visible:text-[var(--usc-cardinal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]" : "group/social relative inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-2.5 py-1.5 text-slate-700 shadow-sm transition hover:border-[var(--usc-cardinal)] hover:text-[var(--usc-cardinal)] focus-visible:border-[var(--usc-cardinal)] focus-visible:text-[var(--usc-cardinal)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--usc-cardinal)]"} href={link.href} key={`${link.name}-${link.href}`} rel="noreferrer" target="_blank">
           {link.icon}<span className="sr-only">{link.label}</span><span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-slate-950 px-2 py-1 text-xs font-semibold text-white opacity-0 shadow-lg transition group-hover/social:opacity-100 group-focus-visible/social:opacity-100" aria-hidden="true">{link.name}</span>
         </a>
       ))}
