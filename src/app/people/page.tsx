@@ -110,12 +110,12 @@ function PeopleList({ section }: { section: PeopleSection }) {
       <h2 className="border-l-4 border-[var(--usc-gold)] pl-4 text-2xl font-semibold text-slate-950">
         {section.title}
       </h2>
-      <ul className="mt-6 space-y-6 sm:space-y-7">
+      <ul className="mt-5 space-y-3 sm:space-y-4">
         {sectionPeople.map((person) => {
           const website = getWebsite(person);
           return (
             <li key={person.slug}>
-              <article className="group relative flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow-md sm:gap-5 sm:p-5">
+              <article className="group relative flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow-md sm:gap-5 sm:p-4">
                 {website ? (
                   <a
                     aria-label={`Visit ${person.name}'s website`}
