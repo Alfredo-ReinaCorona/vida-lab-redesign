@@ -83,6 +83,7 @@ export const people: Person[] = [
     name: "Yuan Xia",
     slug: "yuan-xia",
     group: "former-phd",
+    listSubtitle: "Applied Scientist at Microsoft",
     cardSummary: "Researches large language models, multimodal AI, autonomous driving, distributed systems, and software engineering.",
     biography: [
       "Yuan Xia is pursuing a Ph.D. in Computer Science at the University of Southern California. Her research spans large language models, multimodal AI, autonomous driving, distributed systems, and software engineering. She leads a student group at CPS-VIDA Lab developing LLMs for perception-system monitoring, driving-event detection, and program synthesis. She previously interned at Bell Labs, where she worked on machine-learning research focused on LLM logical reasoning.",
@@ -322,9 +323,10 @@ export const people: Person[] = [
   {
     name: "Alfredo Reina Corona",
     slug: "alfredo-reina-corona",
+    imageSrc: "/images/people/alfredo.jpg",
     displayRole: "M.S. Graduate",
     group: "ms",
-    listSubtitle: "M.S. Graduate",
+    listSubtitle: "M.S. Computer Science Graduate",
     interests: ["Robotics"],
     websiteUrl: "https://alfredoreinacorona.com/",
     linkedinUrl: "https://www.linkedin.com/in/alfredo-reina-corona-bb60a51a2",
@@ -333,9 +335,10 @@ export const people: Person[] = [
   {
     name: "Cagan Bakirci",
     slug: "cagan-bakirci",
+    imageSrc: "/images/people/cagan.jpg",
     displayRole: "M.S. Graduate",
     group: "ms",
-    listSubtitle: "M.S. Graduate",
+    listSubtitle: "M.S. Computer Science Graduate",
     interests: ["Robotics"],
     websiteUrl: "https://caganbakirci.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/caganbakirci",
@@ -344,7 +347,9 @@ export const people: Person[] = [
   {
     name: "Keyan Azbijari",
     slug: "keyan-azbijari",
+    imageSrc: "/images/people/keyan.jpeg",
     group: "ms",
+    listSubtitle: "M.S. Computer Science",
     interests: ["Robotics"],
     linkedinUrl: "https://www.linkedin.com/in/keyan-azbijari-671b201bb",
     placeholder: false,
@@ -352,8 +357,11 @@ export const people: Person[] = [
   {
     name: "Tolga Izdas",
     slug: "tolga-izdas",
+    imageSrc: "/images/people/tolga.jpeg",
     group: "ms",
+    listSubtitle: "M.S. Computer Science",
     interests: ["Robotics"],
+    websiteUrl: "https://tolgaizdas.com/",
     linkedinUrl: "https://www.linkedin.com/in/tolgaizdas",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=GXujHFgAAAAJ",
     placeholder: false,
@@ -361,7 +369,7 @@ export const people: Person[] = [
   {
     name: "Mihir Nitin Kulkarni",
     slug: "mihir-nitin-kulkarni",
-    group: "ms",
+    group: "former-ms",
     interests: [],
     linkedinUrl: "https://www.linkedin.com/in/mihir--kulkarni",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=lSX6abkAAAAJ",
@@ -374,6 +382,7 @@ export const people: Person[] = [
     name: "Qingpei Li",
     slug: "qingpei-li",
     group: "ms",
+    listSubtitle: "M.S. Computer Science",
     interests: [],
     linkedinUrl: "https://www.linkedin.com/in/qingpei-li-224724358",
     selectedWorks: [
@@ -384,17 +393,21 @@ export const people: Person[] = [
   {
     name: "Richard Yang",
     slug: "richard-yang",
+    imageSrc: "/images/people/richard.jpeg",
     group: "undergrad",
+    listSubtitle: "B.S. Electrical Engineering · Visiting Scholar from the University of Florida",
     interests: ["Robotics"],
-    websiteUrl: "https://riyang25.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/yangricharduf/",
     placeholder: false,
   },
   {
     name: "Celina Wang",
     slug: "celina-wang",
+    imageSrc: "/images/people/celina.jpeg",
     group: "undergrad",
+    listSubtitle: "B.S. Physics and Computer Science",
     interests: [],
+    linkedinUrl: "https://www.linkedin.com/in/celina-wang-4032562ba/",
     placeholder: true,
   },
 
