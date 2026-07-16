@@ -69,3 +69,16 @@ The following content is intentionally placeholder, incomplete, or provisional a
 - Qingpei Li
 - Sara Mohammadinejad
 - Celina Wang
+
+## Academic description needed for People list
+
+- Keyan Azbijari
+- Tolga Izdas
+- Mihir Nitin Kulkarni
+- Qingpei Li
+- Richard Yang
+- Celina Wang
+
+## Current position needed for alumni list
+
+- Yuan Xia

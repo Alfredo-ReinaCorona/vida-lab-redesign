@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-5 py-12">
-        <h2 className="text-3xl font-semibold text-slate-950">Research areas</h2>
+        <h2 className="text-3xl font-semibold text-slate-950">Research Areas</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           {researchAreas.slice(0, 4).map((area) => (
             <ResearchCard key={area.title} area={area} />
@@ -42,7 +42,7 @@ export default function Home() {
       </section>
       <section className="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2">
         <div>
-          <h2 className="text-3xl font-semibold text-slate-950">Selected publications</h2>
+          <h2 className="text-3xl font-semibold text-slate-950">Selected Publications</h2>
           <SelectedPublications publications={publications} />
         </div>
         <div>

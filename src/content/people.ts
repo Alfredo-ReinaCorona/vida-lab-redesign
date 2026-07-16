@@ -30,6 +30,7 @@ export type Person = {
   websiteUrl?: string;
   linkedinUrl?: string;
   googleScholarUrl?: string;
+  listSubtitle?: string;
   selectedWork?: SelectedWork[];
   selectedWorks?: SelectedWork[];
   placeholder: boolean;
@@ -116,6 +117,7 @@ export const people: Person[] = [
     website: "https://navidhashemicodes.github.io",
     linkedinUrl: "https://www.linkedin.com/in/navid-hashemi-ph-d-919576153",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=M7Ht5zIAAAAJ",
+    listSubtitle: "Research Scientist at Apple",
     selectedWorks: [
       { title: "Statistical Reachability Analysis of Stochastic Cyber-Physical Systems under Distribution Shift", venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1109/TCAD.2024.3438072" }] },
       { title: "Data-Driven Reachability Analysis of Stochastic Dynamical Systems with Conformal Inference", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2309.09187" }] },
@@ -135,6 +137,7 @@ export const people: Person[] = [
     website: "https://xinqin23.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/xin-qin-4a83b9158",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=-ygrcMkAAAAJ",
+    listSubtitle: "Assistant Professor, California State University, Long Beach",
     selectedWorks: [
       { title: "Conformal Prediction for STL Runtime Verification", venue: "ICCPS", year: "2023", links: [{ label: "Paper", href: "https://doi.org/10.1145/3576841.3585927" }] },
       { title: "Data-Driven Reachability Analysis of Stochastic Dynamical Systems with Conformal Inference", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2309.09187" }] },
@@ -272,6 +275,7 @@ export const people: Person[] = [
     },
     interests: ["Autonomous systems", "Formal specifications", "Learning-enabled systems", "Reinforcement learning", "Perception monitoring"],
     website: "https://anandb.dev",
+    listSubtitle: "Postdoctoral Fellow at The University of Texas at Austin",
     selectedWorks: [
       { title: "Motion Planning for Automata-Based Objectives Using Efficient Gradient-Based Methods", venue: "IROS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] },
       { title: "Model-Free Reinforcement Learning for Spatiotemporal Tasks Using Symbolic Automata", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://doi.org/10.1109/CDC49753.2023.10383559" }] },
@@ -292,6 +296,7 @@ export const people: Person[] = [
     websiteUrl: "https://aniruddh-puranic.info/",
     linkedinUrl: "https://www.linkedin.com/in/andyruddh",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=6Ava7scAAAAJ",
+    listSubtitle: "Scientist I in Next-Gen Robotics at Lila Sciences",
     selectedWorks: [
       { title: "Learning from Demonstrations using Signal Temporal Logic", venue: "CoRL", year: "2021", links: [{ label: "Paper", href: "https://arxiv.org/abs/2102.07730" }] },
       { title: "Learning Performance Graphs from Demonstrations via Task-Based Evaluations", venue: "arXiv", year: "2022", links: [{ label: "Paper", href: "https://arxiv.org/abs/2204.05909" }] },
@@ -308,6 +313,7 @@ export const people: Person[] = [
     },
     interests: [],
     linkedinUrl: "https://www.linkedin.com/in/sara-mohammadinejad-26271417b",
+    listSubtitle: "Senior Member of Technical Staff in GenAI and Machine Learning at Oracle",
     selectedWorks: [
       { title: "Systematic Translation from Natural Language Robot Task Descriptions to STL", venue: "AISoLA", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-75434-0_18" }] },
     ],
@@ -318,6 +324,7 @@ export const people: Person[] = [
     slug: "alfredo-reina-corona",
     displayRole: "M.S. Graduate",
     group: "ms",
+    listSubtitle: "M.S. Graduate",
     interests: ["Robotics"],
     websiteUrl: "https://alfredoreinacorona.com/",
     linkedinUrl: "https://www.linkedin.com/in/alfredo-reina-corona-bb60a51a2",
@@ -328,6 +335,7 @@ export const people: Person[] = [
     slug: "cagan-bakirci",
     displayRole: "M.S. Graduate",
     group: "ms",
+    listSubtitle: "M.S. Graduate",
     interests: ["Robotics"],
     websiteUrl: "https://caganbakirci.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/caganbakirci",
