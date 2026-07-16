@@ -83,7 +83,8 @@ export const people: Person[] = [
     name: "Yuan Xia",
     slug: "yuan-xia",
     group: "former-phd",
-    listSubtitle: "Applied Scientist at Microsoft",
+    imageSrc: "/images/people/yuan_xia.png",
+    listSubtitle: "PhD Computer Science - Applied Scientist at Microsoft",
     cardSummary: "Researches large language models, multimodal AI, autonomous driving, distributed systems, and software engineering.",
     biography: [
       "Yuan Xia is pursuing a Ph.D. in Computer Science at the University of Southern California. Her research spans large language models, multimodal AI, autonomous driving, distributed systems, and software engineering. She leads a student group at CPS-VIDA Lab developing LLMs for perception-system monitoring, driving-event detection, and program synthesis. She previously interned at Bell Labs, where she worked on machine-learning research focused on LLM logical reasoning.",
@@ -107,6 +108,7 @@ export const people: Person[] = [
     name: "Navid Hashemi",
     slug: "navid-hashemi",
     group: "former-phd",
+    imageSrc: "/images/people/navid.png",
     cardSummary: "Studies artificial intelligence and temporal logics for verification and neurosymbolic reinforcement learning.",
     biography: [
       "Navid Hashemi’s research lies at the intersection of artificial intelligence and temporal logics, with applications in formal verification of learning-enabled systems and neurosymbolic reinforcement learning.",
@@ -115,10 +117,9 @@ export const people: Person[] = [
       body: "Navid is a Research Scientist at Apple. His recent public work includes machine-learning research on robust perception systems, probabilistic robustness analysis, and language and fairness.",
     },
     interests: ["Signal temporal logic", "Neurosymbolic AI", "Verification", "Feedback model-based reinforcement learning", "Neural network robustness analysis", "Sensor-fault analysis in cyber-physical systems"],
-    website: "https://navidhashemicodes.github.io",
     linkedinUrl: "https://www.linkedin.com/in/navid-hashemi-ph-d-919576153",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=M7Ht5zIAAAAJ",
-    listSubtitle: "Research Scientist at Apple",
+    listSubtitle: "PhD Computer Science - Research Scientist at Apple",
     selectedWorks: [
       { title: "Statistical Reachability Analysis of Stochastic Cyber-Physical Systems under Distribution Shift", venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1109/TCAD.2024.3438072" }] },
       { title: "Data-Driven Reachability Analysis of Stochastic Dynamical Systems with Conformal Inference", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2309.09187" }] },
@@ -130,6 +131,7 @@ export const people: Person[] = [
     name: "Xin Qin",
     slug: "xin-qin",
     group: "former-phd",
+    imageSrc: "/images/people/xinqin.jpg",
     cardSummary: "Focuses on predictive monitoring, robust testing, verification, formal methods, and machine learning.",
     currentEndeavors: {
       body: "Xin is an Assistant Professor in the Department of Computer Engineering and Computer Science at California State University, Long Beach. Her research develops methods for safer cyber-physical systems through formal methods, predictive monitoring, verification, and machine learning.",
@@ -138,7 +140,7 @@ export const people: Person[] = [
     website: "https://xinqin23.github.io/",
     linkedinUrl: "https://www.linkedin.com/in/xin-qin-4a83b9158",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=-ygrcMkAAAAJ",
-    listSubtitle: "Assistant Professor, California State University, Long Beach",
+    listSubtitle: "PhD Computer Science - Assistant Professor at California State University, Long Beach",
     selectedWorks: [
       { title: "Conformal Prediction for STL Runtime Verification", venue: "ICCPS", year: "2023", links: [{ label: "Paper", href: "https://doi.org/10.1145/3576841.3585927" }] },
       { title: "Data-Driven Reachability Analysis of Stochastic Dynamical Systems with Conformal Inference", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://arxiv.org/abs/2309.09187" }] },
@@ -267,6 +269,7 @@ export const people: Person[] = [
     name: "Anand Balakrishnan",
     slug: "anand-balakrishnan",
     group: "former-phd",
+    imageSrc: "/images/people/anand.jpeg",
     cardSummary: "Designs and verifies autonomous and learning-enabled systems using formal specifications.",
     biography: [
       "Anand Balakrishnan is a Ph.D. candidate in Computer Science advised by Jyotirmoy Deshmukh. His research interests lie in the design and verification of autonomous systems using formal specifications, particularly learning-enabled systems. His current work focuses on reinforcement-learning-based controller synthesis for time-sensitive and safety-critical tasks encoded as temporal logics or automata, and the use of formal logic to monitor perception-based systems.",
@@ -276,7 +279,7 @@ export const people: Person[] = [
     },
     interests: ["Autonomous systems", "Formal specifications", "Learning-enabled systems", "Reinforcement learning", "Perception monitoring"],
     website: "https://anandb.dev",
-    listSubtitle: "Postdoctoral Fellow at The University of Texas at Austin",
+    listSubtitle: "PhD Computer Science - Postdoctoral Fellow at The University of Texas at Austin",
     selectedWorks: [
       { title: "Motion Planning for Automata-Based Objectives Using Efficient Gradient-Based Methods", venue: "IROS", year: "2024", links: [{ label: "Paper", href: "https://arxiv.org/abs/2410.11156" }] },
       { title: "Model-Free Reinforcement Learning for Spatiotemporal Tasks Using Symbolic Automata", venue: "CDC", year: "2023", links: [{ label: "Paper", href: "https://doi.org/10.1109/CDC49753.2023.10383559" }] },
@@ -290,6 +293,7 @@ export const people: Person[] = [
     name: "Aniruddh Puranic",
     slug: "aniruddh-puranic",
     group: "former-phd",
+    imageSrc: "/images/people/aniruddh.jpeg",
     currentEndeavors: {
       body: "Aniruddh is a Scientist I in Next-Gen Robotics at Lila Sciences. He builds autonomous and intelligent robotic systems that accelerate scientific discovery through AI and automation, with work spanning neuro-symbolic AI, reinforcement and imitation learning, formal methods, and safe multi-agent autonomy.",
     },
@@ -297,7 +301,7 @@ export const people: Person[] = [
     websiteUrl: "https://aniruddh-puranic.info/",
     linkedinUrl: "https://www.linkedin.com/in/andyruddh",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=6Ava7scAAAAJ",
-    listSubtitle: "Scientist I in Next-Gen Robotics at Lila Sciences",
+    listSubtitle: "PhD Computer Science - Scientist I, Next-Gen Robotics at Lila Sciences",
     selectedWorks: [
       { title: "Learning from Demonstrations using Signal Temporal Logic", venue: "CoRL", year: "2021", links: [{ label: "Paper", href: "https://arxiv.org/abs/2102.07730" }] },
       { title: "Learning Performance Graphs from Demonstrations via Task-Based Evaluations", venue: "arXiv", year: "2022", links: [{ label: "Paper", href: "https://arxiv.org/abs/2204.05909" }] },
@@ -309,12 +313,13 @@ export const people: Person[] = [
     name: "Sara Mohammadinejad",
     slug: "sara-mohammadinejad",
     group: "former-phd",
+    imageSrc: "/images/people/sara_mohammadinejad.png",
     currentEndeavors: {
       body: "Sara is a Senior Member of Technical Staff in GenAI and Machine Learning at Oracle. Her work advances machine-learning and generative-AI capabilities for MySQL HeatWave, including LLM integration, natural-language-to-ML workflows, vision-language models, MySQL AI, and log-anomaly detection.",
     },
     interests: [],
     linkedinUrl: "https://www.linkedin.com/in/sara-mohammadinejad-26271417b",
-    listSubtitle: "Senior Member of Technical Staff in GenAI and Machine Learning at Oracle",
+    listSubtitle: "PhD Computer Science - AI/ML Engineer at Oracle",
     selectedWorks: [
       { title: "Systematic Translation from Natural Language Robot Task Descriptions to STL", venue: "AISoLA", year: "2024", links: [{ label: "Paper", href: "https://doi.org/10.1007/978-3-031-75434-0_18" }] },
     ],
@@ -370,6 +375,8 @@ export const people: Person[] = [
     name: "Mihir Nitin Kulkarni",
     slug: "mihir-nitin-kulkarni",
     group: "former-ms",
+    imageSrc: "/images/people/mihir_kulkarni.png",
+    listSubtitle: "M.S. Computer Science. Software Engineer at Google",
     interests: [],
     linkedinUrl: "https://www.linkedin.com/in/mihir--kulkarni",
     googleScholarUrl: "https://scholar.google.com/citations?hl=en&user=lSX6abkAAAAJ",
